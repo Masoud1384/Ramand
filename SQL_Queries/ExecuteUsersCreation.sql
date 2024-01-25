@@ -1,0 +1,1 @@
+EXEC Ramand.dbo.CreateUsersTable;
