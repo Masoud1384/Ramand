@@ -47,7 +47,7 @@ namespace Application.UserOperations.RepositoryApplication
 
         public UserVM GetUserBy(string username)
         {
-            return (UserVM)_userRepository.GetUserBy(id);
+            return (UserVM)_userRepository.GetUserBy(username);
         }
 
         public bool Update(UpdateUserCommand user)
