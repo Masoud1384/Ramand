@@ -1,0 +1,12 @@
+D:\TaskRamand\RamandAPI\Domain\bin\Debug\net7.0\Domain.deps.json
+D:\TaskRamand\RamandAPI\Domain\bin\Debug\net7.0\Domain.dll
+D:\TaskRamand\RamandAPI\Domain\bin\Debug\net7.0\Domain.pdb
+D:\TaskRamand\RamandAPI\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+D:\TaskRamand\RamandAPI\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\TaskRamand\RamandAPI\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+D:\TaskRamand\RamandAPI\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+D:\TaskRamand\RamandAPI\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+D:\TaskRamand\RamandAPI\Domain\obj\Debug\net7.0\Domain.dll
+D:\TaskRamand\RamandAPI\Domain\obj\Debug\net7.0\refint\Domain.dll
+D:\TaskRamand\RamandAPI\Domain\obj\Debug\net7.0\Domain.pdb
+D:\TaskRamand\RamandAPI\Domain\obj\Debug\net7.0\ref\Domain.dll

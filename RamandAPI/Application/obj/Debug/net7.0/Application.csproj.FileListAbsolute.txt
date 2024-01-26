@@ -1,0 +1,15 @@
+D:\TaskRamand\RamandAPI\Application\bin\Debug\net7.0\Application.deps.json
+D:\TaskRamand\RamandAPI\Application\bin\Debug\net7.0\Application.dll
+D:\TaskRamand\RamandAPI\Application\bin\Debug\net7.0\Application.pdb
+D:\TaskRamand\RamandAPI\Application\bin\Debug\net7.0\Domain.dll
+D:\TaskRamand\RamandAPI\Application\bin\Debug\net7.0\Domain.pdb
+D:\TaskRamand\RamandAPI\Application\obj\Debug\net7.0\Application.csproj.AssemblyReference.cache
+D:\TaskRamand\RamandAPI\Application\obj\Debug\net7.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\TaskRamand\RamandAPI\Application\obj\Debug\net7.0\Application.AssemblyInfoInputs.cache
+D:\TaskRamand\RamandAPI\Application\obj\Debug\net7.0\Application.AssemblyInfo.cs
+D:\TaskRamand\RamandAPI\Application\obj\Debug\net7.0\Application.csproj.CoreCompileInputs.cache
+D:\TaskRamand\RamandAPI\Application\obj\Debug\net7.0\Application.csproj.CopyComplete
+D:\TaskRamand\RamandAPI\Application\obj\Debug\net7.0\Application.dll
+D:\TaskRamand\RamandAPI\Application\obj\Debug\net7.0\refint\Application.dll
+D:\TaskRamand\RamandAPI\Application\obj\Debug\net7.0\Application.pdb
+D:\TaskRamand\RamandAPI\Application\obj\Debug\net7.0\ref\Application.dll

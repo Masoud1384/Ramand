@@ -6,7 +6,7 @@
         public string Username { get; private set; }
         public string Password { get; private set; }
 
-        public User(int id, string username, string password)
+        public User(int id, string password, string username)
         {
             Id = id;
             Username = username;
@@ -17,6 +17,10 @@
         {
             Username = username;
             Password = password;
+        }
+        public User()
+        {
+                
         }
 
         // In real world projects we must store the hashed passwrod

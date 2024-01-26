@@ -1,4 +1,6 @@
-﻿using Domain.IRepositories;
+﻿using Application.UserOperations.Commands;
+using Application.UserOperations.IRepositoryApplication;
+using Domain.IRepositories;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -10,42 +12,59 @@ namespace RamandAPI.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserRepositoryApplication _userRepository;
-        public UserController()
+        public UserController(IUserRepositoryApplication userRepository)
         {
-                
+            _userRepository = userRepository;  
         }
 
-        // GET: api/<UserController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult GetAllUsers()
         {
-            var users = 
-            return 
+            var users = _userRepository.GetAll();
+            return Ok(users);
         }
 
-        // GET api/<UserController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("userId")]
+        public IActionResult GetUser(int userId)
         {
-            return "value";
+            var user = _userRepository.GetUserBy(userId);
+            return Ok(user);
         }
 
         // POST api/<UserController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post([FromBody] CreateUserCommand createUserCommand)
         {
+            var result = _userRepository.Create(createUserCommand);
+            if (result)
+            {
+                return StatusCode(201);
+            }
+            return BadRequest();
         }
 
         // PUT api/<UserController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut]
+        public IActionResult Put([FromBody] UpdateUserCommand updateUserCommand)
         {
+            var result = _userRepository.Update(updateUserCommand);
+            if (result)
+            {
+                return StatusCode(202);
+            }
+            return BadRequest();
         }
 
         // DELETE api/<UserController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+            var result = _userRepository.Delete(id);
+            if (result)
+            {
+                return Ok();
+            }
+            return BadRequest();
         }
     }
 }

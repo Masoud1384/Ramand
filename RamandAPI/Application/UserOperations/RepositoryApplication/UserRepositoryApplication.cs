@@ -37,24 +37,37 @@ namespace Application.UserOperations.RepositoryApplication
 
         public IEnumerable<UserVM> GetAll()
         {
-            return (List<UserVM>)_userRepository.GetAll();
+            var result = _userRepository.GetAll();
+            return result
+                .Select(user => new UserVM(user.Id, user.Username, user.Password)).ToList();
         }
+
 
         public UserVM GetUserBy(int id)
         {
-            return (UserVM)_userRepository.GetUserBy(id);
+            var user = _userRepository.GetUserBy(id);
+            if (user!=null)
+            {
+                return new UserVM(user.Id, user.Username, user.Password);
+            }
+            return new UserVM();
         }
 
         public UserVM GetUserBy(string username)
         {
-            return (UserVM)_userRepository.GetUserBy(username);
+            var user = _userRepository.GetUserBy(username);
+            if (user != null)
+            {
+                return new UserVM(user.Id, user.Username, user.Password);
+            }
+            return new UserVM();
         }
 
         public bool Update(UpdateUserCommand user)
         {
-            if (user.Id > 0)
+            if (user.id > 0)
             {
-                var result = _userRepository.Update(new User(user.Id, user.Username, user.Password));
+                var result = _userRepository.Update(new User(user.id, user.password, user.username));
                 return result > 0;
             }
             return false;
