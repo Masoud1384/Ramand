@@ -117,6 +117,52 @@ namespace Infrastructure.Repositories
             }
         }
 
+        #region DRY 
+        // this is another way to build the GetUser method without repeating the code
+        // but it has a slight impact on performance so i'd prefer to use the upper way
+
+
+
+        //public User GetUserBy(dynamic value)
+        //{
+        //    try
+        //    {
+        //        using (var connection = new SqlConnection(_connectionString))
+        //        {
+        //            connection.Open();
+
+        //            var parameters = new DynamicParameters();
+        //            string parameterName;
+        //            DbType dbType;
+
+        //            if (value is int)
+        //            {
+        //                parameterName = "@Id";
+        //                dbType = DbType.Int32;
+        //            }
+        //            else if (value is string)
+        //            {
+        //                parameterName = "@Username";
+        //                dbType = DbType.String;
+        //            }
+        //            else
+        //            {
+        //                throw new ArgumentException("Value must be an integer or a string.");
+        //            }
+
+        //            parameters.Add(parameterName, value, dbType);
+
+        //            return connection.QueryFirstOrDefault<User>("SelectUser", parameters, commandType: CommandType.StoredProcedure);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine(ex.Message);
+        //        throw;
+        //    }
+        //}
+        #endregion
+
         public int Update(User user)
         {
             try
