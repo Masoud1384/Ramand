@@ -18,7 +18,9 @@ namespace Application.UserOperations.RepositoryApplication
         {
             if (!(string.IsNullOrWhiteSpace(createUserCommand.username) && string.IsNullOrWhiteSpace(createUserCommand.password)))
             {
-                var user = new Domain.Models.User(createUserCommand.username, createUserCommand.password);
+                var token = createUserCommand.Token;
+                var user = new Domain.Models.User(createUserCommand.username, createUserCommand.password
+                    ,new Token(token.JwtToken,token.Expire,token.RefreshToken,token.RefreshTokenExp));
                 var result = _userRepository.Create(user);
                 return result > 0;
             }
@@ -67,7 +69,8 @@ namespace Application.UserOperations.RepositoryApplication
         {
             if (user.id > 0)
             {
-                var result = _userRepository.Update(new User(user.id, user.password, user.username));
+                var token = user.Token;
+                var result = _userRepository.Update(new User(user.id, user.password, user.username,new Token(token.Id,token.JwtToken,token.Expire,token.RefreshToken,token.RefreshTokenExp)));
                 return result > 0;
             }
             return false;

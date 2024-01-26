@@ -12,6 +12,7 @@ namespace Infrastructure
         {
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserRepositoryApplication, UserRepositoryApplication>();
+            services.AddScoped<ITokenRepository, TokenRepository>();
         }
     }
 }

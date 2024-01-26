@@ -1,16 +1,20 @@
-﻿namespace Application.UserOperations.Commands
+﻿using Application.TokenOperations.TokenCommands;
+
+namespace Application.UserOperations.Commands
 {
-    public class UpdateUserCommand
+    public class UpdateUserCommand : CreateUserCommand
     {
         public int id { get; set; }
-        public string username { get; set; }
-        public string password { get; set; }
 
-        public UpdateUserCommand(int id, string username, string password)
+        public UpdateUserCommand(int id, string username, string password,TokenCommand token)
         {
             this.id = id;
             this.username = username;
             this.password = password;
+        }
+        public UpdateUserCommand()
+        {
+                
         }
     }
 }

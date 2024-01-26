@@ -12,5 +12,6 @@ namespace Domain.IRepositories
 
         User GetUserBy(int id);
         User GetUserBy(string username);
+     
     }
 }

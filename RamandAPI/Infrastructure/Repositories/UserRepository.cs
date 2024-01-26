@@ -3,12 +3,21 @@ using Domain.IRepositories;
 using Domain.Models;
 using System.Data;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Infrastructure.Repositories
 {
     public class UserRepository : IUserRepository
     {
         private readonly string _connectionString = "Server=.;DataBase=Ramand;Trusted_Connection=True;Encrypt=False;";
+        private readonly RandomNumberGenerator random = RandomNumberGenerator.Create();
+        private readonly ITokenRepository _tokenRepository;
+
+        public UserRepository(ITokenRepository tokenRepository)
+        {
+            _tokenRepository = tokenRepository;
+        }
 
         public int Create(User user)
         {
@@ -86,8 +95,9 @@ namespace Infrastructure.Repositories
                     var parameters = new DynamicParameters();
                     parameters.Add("@Id", id, DbType.Int32);
 
-                    return connection.QueryFirstOrDefault<User>("SelectUser", parameters, commandType: CommandType.StoredProcedure);
+                    return connection.QueryFirstOrDefault<User>("SelectUserById", parameters, commandType: CommandType.StoredProcedure);
                 }
+
             }
             catch (Exception ex)
             {
@@ -107,7 +117,7 @@ namespace Infrastructure.Repositories
                     var parameters = new DynamicParameters();
                     parameters.Add("@Username", username, DbType.String);
 
-                    return connection.QueryFirstOrDefault<User>("SelectUser", parameters, commandType: CommandType.StoredProcedure);
+                    return connection.QueryFirstOrDefault<User>("SelectUserByUsername", parameters, commandType: CommandType.StoredProcedure);
                 }
             }
             catch (Exception ex)
@@ -116,7 +126,6 @@ namespace Infrastructure.Repositories
                 throw;
             }
         }
-
         #region DRY 
         // this is another way to build the GetUser method without repeating the code
         // but it has a slight impact on performance so i'd prefer to use the upper way
