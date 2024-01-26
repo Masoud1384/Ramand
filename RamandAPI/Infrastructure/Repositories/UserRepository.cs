@@ -12,6 +12,8 @@ namespace Infrastructure.Repositories
 
         public int Create(User user)
         {
+            // using try-catch isn't a proper way to handle errors however since we're building a test
+            // project we use it but in the big and serious projects we must design a way to handle errors.
             try
             {
                 using (var connection = new SqlConnection(_connectionString))
