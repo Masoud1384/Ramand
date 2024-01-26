@@ -11,13 +11,6 @@ namespace Infrastructure.Repositories
     public class UserRepository : IUserRepository
     {
         private readonly string _connectionString = "Server=.;DataBase=Ramand;Trusted_Connection=True;Encrypt=False;";
-        private readonly RandomNumberGenerator random = RandomNumberGenerator.Create();
-        private readonly ITokenRepository _tokenRepository;
-
-        public UserRepository(ITokenRepository tokenRepository)
-        {
-            _tokenRepository = tokenRepository;
-        }
 
         public int Create(User user)
         {
@@ -95,9 +88,18 @@ namespace Infrastructure.Repositories
                     var parameters = new DynamicParameters();
                     parameters.Add("@Id", id, DbType.Int32);
 
-                    return connection.QueryFirstOrDefault<User>("SelectUserById", parameters, commandType: CommandType.StoredProcedure);
-                }
+                    var userToken = connection.QueryFirstOrDefault<UserToken>("SelectUserById", parameters, commandType: CommandType.StoredProcedure);
 
+                    if (userToken != null)
+                    {
+                        var user = new User(userToken.Id, userToken.Username, userToken.Password);
+                        var token = new Token(userToken.Id, userToken.Token, userToken.Expire, userToken.RefreshToken, userToken.RefreshTokenExp);
+                        user.Token = token;
+                        return user;
+                    }
+
+                    return null;
+                }
             }
             catch (Exception ex)
             {
@@ -105,6 +107,7 @@ namespace Infrastructure.Repositories
                 throw;
             }
         }
+
 
         public User GetUserBy(string username)
         {
@@ -117,13 +120,33 @@ namespace Infrastructure.Repositories
                     var parameters = new DynamicParameters();
                     parameters.Add("@Username", username, DbType.String);
 
-                    return connection.QueryFirstOrDefault<User>("SelectUserByUsername", parameters, commandType: CommandType.StoredProcedure);
+                    var userToken = connection.QueryFirstOrDefault<UserToken>("SelectUserByUsername", parameters, commandType: CommandType.StoredProcedure);
+
+                    if (userToken != null)
+                    {
+                        var user = new User(userToken.Id, userToken.Username, userToken.Password);
+                        var token = new Token(userToken.Id, userToken.Token, userToken.Expire, userToken.RefreshToken, userToken.RefreshTokenExp);
+                        user.Token = token;
+                        return user;
+                    }
+
+                    return null;
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 throw;
+            }
+        }
+
+        public bool IsUsernameExist(string username)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+                var result = connection.Query<int>("EXEC Ramand.dbo.IsUsernameExist @username", new { username }).SingleOrDefault();
+                return result == 1;
             }
         }
         #region DRY 
@@ -194,5 +217,15 @@ namespace Infrastructure.Repositories
                 throw;
             }
         }
+    }
+    class UserToken
+    {
+        public int Id { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string Token { get; set; }
+        public DateTime Expire { get; set; }
+        public string RefreshToken { get; set; }
+        public DateTime RefreshTokenExp { get; set; }
     }
 }

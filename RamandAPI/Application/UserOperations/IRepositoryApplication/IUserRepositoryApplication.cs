@@ -7,9 +7,12 @@ namespace Application.UserOperations.IRepositoryApplication
         IEnumerable<UserVM> GetAll();
         bool Update(UpdateUserCommand user);
         bool Delete(int userId);
-        bool Create(CreateUserCommand user);
+        UserVM Create(CreateUserCommand user);
 
         UserVM GetUserBy(int id);
         UserVM GetUserBy(string username);
+
+        bool IsUsernameExist(string username);
+
     }
 }

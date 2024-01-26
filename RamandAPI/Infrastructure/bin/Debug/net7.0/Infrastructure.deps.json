@@ -111,7 +111,9 @@
       "System.Security.Principal.Windows/4.7.0": {},
       "Application/1.0.0": {
         "dependencies": {
-          "Domain": "1.0.0"
+          "Dapper": "2.1.28",
+          "Domain": "1.0.0",
+          "System.Data.SqlClient": "4.8.6"
         },
         "runtime": {
           "Application.dll": {}

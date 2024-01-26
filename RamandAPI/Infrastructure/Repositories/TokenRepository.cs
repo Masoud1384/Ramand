@@ -55,9 +55,6 @@ namespace Infrastructure.Repositories
         {
             if (!string.IsNullOrWhiteSpace(token.JwtToken))
             {
-                var algorithm = new SHA256CryptoServiceProvider();
-                var byteValue = Encoding.UTF8.GetBytes(token.JwtToken);
-                var hashbyte = Convert.ToBase64String(algorithm.ComputeHash(byteValue));
                 var user = _userRepository.GetUserBy(userId);
                 if (user != null)
                 {
@@ -67,12 +64,12 @@ namespace Infrastructure.Repositories
 
                         var parameters = new DynamicParameters();
                         parameters.Add("@Id", userId, DbType.Int32);
-                        parameters.Add("@Token", hashbyte, DbType.String);
+                        parameters.Add("@Token", token.JwtToken, DbType.String);
                         parameters.Add("@Expire", token.Expire, DbType.DateTime);
                         parameters.Add("@RefreshToken", token.RefreshToken, DbType.String);
                         parameters.Add("@RefreshTokenExp", token.RefreshTokenExp, DbType.DateTime);
 
-                        int rowsAffected = connection.Execute("InsertUserToken", parameters, commandType: CommandType.StoredProcedure);
+                        int rowsAffected = connection.Execute("UpsertUserToken", parameters, commandType: CommandType.StoredProcedure);
                         return rowsAffected > 0;
                     }
                 }

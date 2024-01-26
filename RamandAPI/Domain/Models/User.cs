@@ -5,13 +5,14 @@
         public int Id { get; private set; }
         public string Username { get; private set; }
         public string Password { get; private set; }
-        public Token Token { get; set; }
+        public Token? Token { get; set; }
 
         public User(int id, string password, string username, Token token)
         {
             Id = id;
             Username = username;
             Password = password;
+            Token = token;
         }
 
         public User(string username, string password, Token token)

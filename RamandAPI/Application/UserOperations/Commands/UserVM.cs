@@ -17,7 +17,7 @@ namespace Application.UserOperations.Commands
                 
         }
 
-        public UserVM(int id, string password, string username) : base(id, password, username)
+        public UserVM(int id, string password, string username) : base(id, username, password)
         {
         }
     }

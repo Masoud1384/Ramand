@@ -1,4 +1,5 @@
-﻿using Application.UserOperations.Commands;
+﻿using Application.TokenOperations.TokenCommands;
+using Application.UserOperations.Commands;
 using Application.UserOperations.IRepositoryApplication;
 using Domain.IRepositories;
 using Domain.Models;
@@ -14,17 +15,19 @@ namespace Application.UserOperations.RepositoryApplication
             _userRepository = userRepository;
         }
 
-        public bool Create(CreateUserCommand createUserCommand)
+        public UserVM Create(CreateUserCommand createUserCommand)
         {
             if (!(string.IsNullOrWhiteSpace(createUserCommand.username) && string.IsNullOrWhiteSpace(createUserCommand.password)))
             {
-                var token = createUserCommand.Token;
-                var user = new Domain.Models.User(createUserCommand.username, createUserCommand.password
-                    ,new Token(token.JwtToken,token.Expire,token.RefreshToken,token.RefreshTokenExp));
+                var user = new User(createUserCommand.username, createUserCommand.password,new Token());
                 var result = _userRepository.Create(user);
-                return result > 0;
+                if (result > 0)
+                {
+                    var uservmdata =  _userRepository.GetUserBy(createUserCommand.username);
+                    return new UserVM(uservmdata.Id,uservmdata.Password,uservmdata.Username);
+                }
             }
-            return false;
+            return null;
         }
 
         public bool Delete(int userId)
@@ -48,9 +51,11 @@ namespace Application.UserOperations.RepositoryApplication
         public UserVM GetUserBy(int id)
         {
             var user = _userRepository.GetUserBy(id);
-            if (user!=null)
+            if (user != null)
             {
-                return new UserVM(user.Id, user.Username, user.Password);
+                var token = new TokenCommand(user.Id,user.Token.JwtToken, user.Token.Expire, user.Token.RefreshToken, user.Token.RefreshTokenExp);
+
+                return new UserVM(user.Id, user.Username, user.Password,token);
             }
             return new UserVM();
         }
@@ -60,9 +65,21 @@ namespace Application.UserOperations.RepositoryApplication
             var user = _userRepository.GetUserBy(username);
             if (user != null)
             {
-                return new UserVM(user.Id, user.Username, user.Password);
+                var token = new TokenCommand(user.Id,user.Token.JwtToken,user.Token.Expire,user.Token.RefreshToken, user.Token.RefreshTokenExp);
+
+                return new UserVM(user.Id, user.Username, user.Password,token);
             }
             return new UserVM();
+        }
+
+        public bool IsUsernameExist(string username)
+        {
+            if (!string.IsNullOrEmpty(username))
+            {
+                return _userRepository.IsUsernameExist(username);
+            }
+            return true;
+            // if the useranme was empty or null we return true so it assumes that it's taken and becomes unavaliable
         }
 
         public bool Update(UpdateUserCommand user)
@@ -70,7 +87,7 @@ namespace Application.UserOperations.RepositoryApplication
             if (user.id > 0)
             {
                 var token = user.Token;
-                var result = _userRepository.Update(new User(user.id, user.password, user.username,new Token(token.Id,token.JwtToken,token.Expire,token.RefreshToken,token.RefreshTokenExp)));
+                var result = _userRepository.Update(new User(user.id, user.password, user.username, new Token(token.Id, token.JwtToken, token.Expire, token.RefreshToken, token.RefreshTokenExp)));
                 return result > 0;
             }
             return false;
