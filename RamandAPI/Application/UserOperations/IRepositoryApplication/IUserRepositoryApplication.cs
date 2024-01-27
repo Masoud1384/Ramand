@@ -5,8 +5,7 @@ namespace Application.UserOperations.IRepositoryApplication
     public interface IUserRepositoryApplication
     {
         IEnumerable<UserVM> GetAll();
-        bool Update(UpdateUserCommand user);
-        bool Delete(int userId);
+        bool Delete(string username);
         UserVM Create(CreateUserCommand user);
 
         UserVM GetUserBy(int id);

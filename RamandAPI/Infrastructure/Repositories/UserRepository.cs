@@ -37,7 +37,7 @@ namespace Infrastructure.Repositories
 
         }
 
-        public int Delete(int userId)
+        public int Delete(string username)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace Infrastructure.Repositories
                     connection.Open();
 
                     var parameters = new DynamicParameters();
-                    parameters.Add("@Id", userId, DbType.Int32);
+                    parameters.Add("@username", username, DbType.String);
 
                     return connection.Execute("DeleteUser", parameters, commandType: CommandType.StoredProcedure);
                 }

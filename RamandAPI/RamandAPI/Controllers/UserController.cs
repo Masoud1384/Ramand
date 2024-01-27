@@ -27,24 +27,39 @@ namespace RamandAPI.Controllers
             _configuration = configuration;
         }
 
+        // همونظور که خواسته شده بود سیستم تایید هویت و ثبت نام رو با استفاده از نام و رمز کاربر ساختیم و با استفاده از دپر
+        // عملیات های دیتابیس که با  stored procedures  
+        // های ساخته شده انجام میشود پیاده سازی کردیم
+        // دریافت تمامی کاربران با استفاده از توکنی که از طریق هدر داده میشود اعتبار سنجی میشود و اگر درست بود برگشت داده میشوند
+        // تمامی اسکریپت های دیتابیس استفاده شده در فولدر اس کیو ال کوئریز هست
         [HttpGet]
         [Route("SelectAll")]
         public IActionResult GetAllUsers([FromHeader] string jwtToken)
         {
             if (!_tokenRepository.ValidateToken(jwtToken))
             {
-                return Unauthorized();
+                return Unauthorized(new { message = "Invalid or expired token." });
             }
             var users = _userRepository.GetAll();
-            return Ok(users);
+            if (users != null)
+            {
+                return Ok(new { message = "Users retrieved successfully.", users = users });
+            }
+            return NotFound(new { message = "No users found." });
         }
+
 
         [HttpGet("{userId}")]
         public IActionResult GetUser(int userId)
         {
             var user = _userRepository.GetUserBy(userId);
-            return Ok(user);
+            if (user != null)
+            {
+                return Ok(new { message = "User found.", user = user });
+            }
+            return NotFound(new { message = "User not found." });
         }
+
         [HttpPost("SignUp")]
         public IActionResult SignUp([FromBody] CreateUserCommand createUserCommand)
         {
@@ -57,11 +72,12 @@ namespace RamandAPI.Controllers
                 var user = _userRepository.GetUserBy(uservm.Username);
                 if (user != null && user.Token != null)
                 {
-                    return Ok(new TokenCommand { Expire = jwtToken.Expire, Id = jwtToken.Id, RefreshTokenExp = jwtToken.RefreshTokenExp, JwtToken = jwtToken.JwtToken, RefreshToken = jwtToken.RefreshToken });
+                    return StatusCode(201, new { message = "User successfully created.", token = new TokenCommand { Expire = jwtToken.Expire, Id = jwtToken.Id, RefreshTokenExp = jwtToken.RefreshTokenExp, JwtToken = jwtToken.JwtToken, RefreshToken = jwtToken.RefreshToken } });
                 }
             }
-            return BadRequest("Username already exists");
+            return Conflict(new { message = "Username already exists." });
         }
+
 
         [HttpPost]
         [Route("Login")]
@@ -74,11 +90,16 @@ namespace RamandAPI.Controllers
                 var jwtToken = uservm.Token;
                 if (uservm.Token.Expire > DateTime.Now)
                 {
-                    return Ok(new TokenCommand { Expire = jwtToken.Expire, Id = jwtToken.Id, RefreshTokenExp = jwtToken.RefreshTokenExp, JwtToken = jwtToken.JwtToken, RefreshToken = jwtToken.RefreshToken });
+                    return Ok(new { message = "Login successful.", token = new TokenCommand { Expire = jwtToken.Expire, Id = jwtToken.Id, RefreshTokenExp = jwtToken.RefreshTokenExp, JwtToken = jwtToken.JwtToken, RefreshToken = jwtToken.RefreshToken } });
+                }
+                else
+                {
+                    return Unauthorized(new { message = "Token expired." });
                 }
             }
-            return Unauthorized();
+            return Unauthorized(new { message = "Invalid credentials." });
         }
+
 
         [HttpPost("RefreshToken")]
         public IActionResult RefreshToken(string refreshToken)
@@ -86,38 +107,26 @@ namespace RamandAPI.Controllers
             var userToken = _tokenRepository.GetRefreshToken(refreshToken);
             if (userToken == null)
             {
-                return NotFound();
+                return NotFound(new { message = "Refresh token not found." });
             }
             if (userToken.RefreshTokenExp < DateTime.Now)
             {
-                return Unauthorized();
+                return Unauthorized(new { message = "Refresh token expired." });
             }
             var newToken = _tokenRepository.CreateRefreshToken(refreshToken);
-            return Ok(new TokenCommand { RefreshToken = newToken.RefreshToken, RefreshTokenExp = newToken.RefreshTokenExp });
+            return StatusCode(202, new { message = "Refresh token successfully updated.", token = new TokenCommand { RefreshToken = newToken.RefreshToken, RefreshTokenExp = newToken.RefreshTokenExp } });
         }
-        [HttpPut]
-        public IActionResult Put([FromBody] UpdateUserCommand updateUserCommand)
+
+        [HttpDelete]
+        public IActionResult Delete(string username)
         {
-            var result = _userRepository.Update(updateUserCommand);
+            var result = _userRepository.Delete(username);
             if (result)
             {
-                return StatusCode(202);
+                return Ok(new { message = "User successfully deleted." });
             }
-            return BadRequest();
+            return NotFound(new { message = "User not found." });
         }
-
-        [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
-        {
-            var result = _userRepository.Delete(id);
-            if (result)
-            {
-                return Ok();
-            }
-            return BadRequest();
-        }
-
-
 
         private TokenCommand TokenGenerator(UserVM userVm)
         {

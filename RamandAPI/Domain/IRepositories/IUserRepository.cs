@@ -6,7 +6,7 @@ namespace Domain.IRepositories
     {
         IEnumerable<User> GetAll();
         int Update(User user);
-        int Delete(int userId);
+        int Delete(string useranme);
         // Also we can add a IsActive property to users so instead of delete we just deactivate the user
         int Create(User user);
 

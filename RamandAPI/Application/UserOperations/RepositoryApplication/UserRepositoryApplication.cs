@@ -30,11 +30,11 @@ namespace Application.UserOperations.RepositoryApplication
             return null;
         }
 
-        public bool Delete(int userId)
+        public bool Delete(string username)
         {
-            if (userId > 0)
+            if (!string.IsNullOrWhiteSpace(username))
             {
-                var result = _userRepository.Delete(userId);
+                var result = _userRepository.Delete(username);
                 return result > 0;
             }
             return false;
@@ -80,17 +80,6 @@ namespace Application.UserOperations.RepositoryApplication
             }
             return true;
             // if the useranme was empty or null we return true so it assumes that it's taken and becomes unavaliable
-        }
-
-        public bool Update(UpdateUserCommand user)
-        {
-            if (user.id > 0)
-            {
-                var token = user.Token;
-                var result = _userRepository.Update(new User(user.id, user.password, user.username, new Token(token.Id, token.JwtToken, token.Expire, token.RefreshToken, token.RefreshTokenExp)));
-                return result > 0;
-            }
-            return false;
         }
     }
 }

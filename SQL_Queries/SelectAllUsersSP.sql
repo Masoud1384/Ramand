@@ -1,0 +1,8 @@
+USE Ramand;
+GO 
+
+CREATE PROCEDURE SelectAllUsers
+AS
+BEGIN
+    SELECT * FROM users
+END

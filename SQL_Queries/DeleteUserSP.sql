@@ -2,8 +2,8 @@ USE Ramand;
 GO
 
 CREATE PROCEDURE DeleteUser
-    @Id INT
+    @username NVARCHAR(255)
 AS
 BEGIN
-    DELETE FROM users WHERE Id = @Id
+    DELETE FROM users WHERE username= @username
 END
