@@ -76,5 +76,23 @@ namespace Infrastructure.Repositories
             }
             return false;
         }
+
+        public bool ValidateToken(string jwtToken)
+        {
+            if (!string.IsNullOrEmpty(jwtToken))
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                {
+                    connection.Open();
+
+                    var parameters = new DynamicParameters();
+                    parameters.Add("@Token", jwtToken, DbType.String);
+
+                    var result = connection.QueryFirstOrDefault<bool>("IsTokenExpired", parameters, commandType: CommandType.StoredProcedure);
+                    return result;
+                }
+            }
+            return false;
+        }
     }
 }

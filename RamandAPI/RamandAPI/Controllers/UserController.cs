@@ -2,6 +2,7 @@
 using Application.UserOperations.Commands;
 using Application.UserOperations.IRepositoryApplication;
 using Domain.IRepositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.UserSecrets;
@@ -28,8 +29,12 @@ namespace RamandAPI.Controllers
 
         [HttpGet]
         [Route("SelectAll")]
-        public IActionResult GetAllUsers()
+        public IActionResult GetAllUsers([FromHeader] string jwtToken)
         {
+            if (!_tokenRepository.ValidateToken(jwtToken))
+            {
+                return Unauthorized();
+            }
             var users = _userRepository.GetAll();
             return Ok(users);
         }
@@ -50,13 +55,14 @@ namespace RamandAPI.Controllers
                 var jwtToken = TokenGenerator(uservm);
                 _tokenRepository.SaveToken(uservm.Id, new Domain.Models.Token(jwtToken.JwtToken, jwtToken.Expire, jwtToken.RefreshToken, jwtToken.RefreshTokenExp));
                 var user = _userRepository.GetUserBy(uservm.Username);
-                if (user != null&&user.Token != null)
+                if (user != null && user.Token != null)
                 {
-                    return Ok(new TokenCommand {Expire= jwtToken.Expire,Id= jwtToken.Id,RefreshTokenExp = jwtToken.RefreshTokenExp, JwtToken = jwtToken.JwtToken, RefreshToken = jwtToken.RefreshToken });
+                    return Ok(new TokenCommand { Expire = jwtToken.Expire, Id = jwtToken.Id, RefreshTokenExp = jwtToken.RefreshTokenExp, JwtToken = jwtToken.JwtToken, RefreshToken = jwtToken.RefreshToken });
                 }
             }
             return BadRequest("Username already exists");
         }
+
         [HttpPost]
         [Route("Login")]
         public IActionResult Login([FromBody] LoginCommand user)
@@ -68,12 +74,12 @@ namespace RamandAPI.Controllers
                 var jwtToken = uservm.Token;
                 if (uservm.Token.Expire > DateTime.Now)
                 {
-                    return Ok(new TokenCommand {Expire = jwtToken.Expire, Id = jwtToken.Id, RefreshTokenExp = jwtToken.RefreshTokenExp, JwtToken = jwtToken.JwtToken, RefreshToken = jwtToken.RefreshToken });
-
+                    return Ok(new TokenCommand { Expire = jwtToken.Expire, Id = jwtToken.Id, RefreshTokenExp = jwtToken.RefreshTokenExp, JwtToken = jwtToken.JwtToken, RefreshToken = jwtToken.RefreshToken });
                 }
             }
             return Unauthorized();
         }
+
         [HttpPost("RefreshToken")]
         public IActionResult RefreshToken(string refreshToken)
         {
@@ -87,7 +93,7 @@ namespace RamandAPI.Controllers
                 return Unauthorized();
             }
             var newToken = _tokenRepository.CreateRefreshToken(refreshToken);
-            return Ok(new TokenCommand { RefreshToken = newToken.RefreshToken, JwtToken = newToken.JwtToken });
+            return Ok(new TokenCommand { RefreshToken = newToken.RefreshToken, RefreshTokenExp = newToken.RefreshTokenExp });
         }
         [HttpPut]
         public IActionResult Put([FromBody] UpdateUserCommand updateUserCommand)
@@ -110,6 +116,8 @@ namespace RamandAPI.Controllers
             }
             return BadRequest();
         }
+
+
 
         private TokenCommand TokenGenerator(UserVM userVm)
         {

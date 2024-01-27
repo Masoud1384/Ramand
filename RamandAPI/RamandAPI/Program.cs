@@ -16,18 +16,19 @@ builder.Services.AddAuthentication(option =>
     option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
     option.DefaultSignInScheme = JwtBearerDefaults.AuthenticationScheme;
     option.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(configureOptions =>
-{
-    configureOptions.TokenValidationParameters = new TokenValidationParameters()
-    {
-        ValidIssuer = builder.Configuration["JWT:issuer"],
-        ValidAudience = builder.Configuration["JWT:audience"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:key"])),
-        ValidateIssuerSigningKey = true,
-        ValidateLifetime = true
-    };
-    configureOptions.SaveToken = true;
-});
+}).AddJwtBearer(options =>
+  options.TokenValidationParameters = new TokenValidationParameters
+  {
+      ValidateIssuer = true,
+      ValidateAudience = true,
+      ValidateLifetime = true,
+      ValidateIssuerSigningKey = true,
+      ValidIssuer = builder.Configuration["JWT:issuer"],
+      ValidAudience = builder.Configuration["JWT:audience"],
+      IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:key"]))
+  });
+
+
 DI.Configure(builder.Services);
 var app = builder.Build();
 
@@ -39,8 +40,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-app.UseAuthorization();
+app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 
