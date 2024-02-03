@@ -7,7 +7,7 @@ namespace RamandAPI.V2
 {
     [ApiVersion("2.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
-    [ApiController] 
+    [ApiController]
     public class UserController : V1.UserController
     {
         private readonly IUserRepositoryApplication _userRepositoryApplication;
@@ -15,7 +15,7 @@ namespace RamandAPI.V2
         {
         }
         public UserController(IUserRepositoryApplication userRepository)
-            :base(userRepository)
+            : base(userRepository)
         {
             this._userRepositoryApplication = userRepository;
         }
@@ -23,26 +23,45 @@ namespace RamandAPI.V2
         [HttpGet]
         public IActionResult Get(int id)
         {
-            return Ok();
+            var user = _userRepositoryApplication.GetUserBy(id);
+            if (user != null)
+            {
+                return Ok(user);
+            }
+            return BadRequest();
         }
 
         [HttpGet("getpr")]
 
         public IActionResult Get()
         {
-            return Ok();
+            var users = _userRepositoryApplication.GetAll();
+            if (users.Count() > 0)
+            {
+                return Ok(users);
+            }
+            return NotFound();
         }
 
         [HttpPost]
         public IActionResult Post(CreateUserCommand createUserCommand)
         {
-
-            return Created("",new { });
+            var uservm = _userRepositoryApplication.Create(createUserCommand);
+            if (uservm != null)
+            {
+                return Created("user added", new { uservm });
+            }
+            return BadRequest();
         }
         [HttpPut]
         public IActionResult Put(UpdateUserCommand updateUserCommand)
         {
-            return Ok();
+            var isUserUpdated = _userRepositoryApplication.Update(updateUserCommand);
+            if (isUserUpdated)
+            {
+                return Ok(updateUserCommand);
+            }
+            return BadRequest();
         }
     }
 }
