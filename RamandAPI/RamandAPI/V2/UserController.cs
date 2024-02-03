@@ -1,27 +1,48 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+﻿using Application.UserOperations.Commands;
+using Application.UserOperations.IRepositoryApplication;
+using Domain.IRepositories;
+using Microsoft.AspNetCore.Mvc;
 
 namespace RamandAPI.V2
 {
     [ApiVersion("2.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
-    [ApiController]
-    public class UserController : ControllerBase
+    [ApiController] 
+    public class UserController : V1.UserController
     {
-        // GET: api/<UserController>
-        [HttpGet]
-        public IEnumerable<string> Get(int id)
+        private readonly IUserRepositoryApplication _userRepositoryApplication;
+        public UserController(IUserRepositoryApplication userRepository, ITokenRepository tokenRepository, IConfiguration configuration) : base(userRepository, tokenRepository, configuration)
         {
-            return new string[] { "value1", "value2" };
+        }
+        public UserController(IUserRepositoryApplication userRepository)
+            :base(userRepository)
+        {
+            this._userRepositoryApplication = userRepository;
         }
 
-        // GET api/<UserController>/5
+        [HttpGet]
+        public IActionResult Get(int id)
+        {
+            return Ok();
+        }
+
         [HttpGet("getpr")]
 
-        public string Get()
+        public IActionResult Get()
         {
-            return "value";
+            return Ok();
+        }
+
+        [HttpPost]
+        public IActionResult Post(CreateUserCommand createUserCommand)
+        {
+
+            return Created("",new { });
+        }
+        [HttpPut]
+        public IActionResult Put(UpdateUserCommand updateUserCommand)
+        {
+            return Ok();
         }
     }
 }

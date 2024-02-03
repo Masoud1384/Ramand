@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net7.0-windows7.0": {
+    "net7.0": {
       "Dapper/2.1.28": {
         "type": "package",
         "compile": {
@@ -1849,7 +1849,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net7.0-windows7.0": [
+    "net7.0": [
       "Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.15",
       "Microsoft.AspNetCore.Mvc.Versioning >= 5.1.0",
@@ -1874,15 +1874,15 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net7.0-windows7.0"
+        "net7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net7.0-windows7.0": {
-          "targetAlias": "net7.0-windows7.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "projectReferences": {
             "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Infrastructure\\Infrastructure.csproj": {
               "projectPath": "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Infrastructure\\Infrastructure.csproj"
@@ -1897,8 +1897,8 @@
       }
     },
     "frameworks": {
-      "net7.0-windows7.0": {
-        "targetAlias": "net7.0-windows7.0",
+      "net7.0": {
+        "targetAlias": "net7.0",
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",

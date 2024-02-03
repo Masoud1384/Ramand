@@ -14,11 +14,10 @@ namespace Application.UserOperations.Commands
         {
 
         }
-        public CreateUserCommand(string username,string password, TokenCommand token)
+        public CreateUserCommand(string username,string password)
         {
             this.username = username;
             this.password = password;
-            Token = token;
         }
     }
 }

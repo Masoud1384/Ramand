@@ -3,8 +3,6 @@ using Domain.IRepositories;
 using Domain.Models;
 using System.Data;
 using System.Data.SqlClient;
-using System.Security.Cryptography;
-using System.Text;
 
 namespace Infrastructure.Repositories
 {
@@ -107,7 +105,6 @@ namespace Infrastructure.Repositories
                 throw;
             }
         }
-
 
         public User GetUserBy(string username)
         {
