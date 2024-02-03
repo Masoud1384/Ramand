@@ -2,6 +2,8 @@ using Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Versioning;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,7 +29,15 @@ builder.Services.AddAuthentication(option =>
       ValidAudience = builder.Configuration["JWT:audience"],
       IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:key"]))
   });
-
+builder.Services.AddApiVersioning(
+    options =>
+    {
+        options.AssumeDefaultVersionWhenUnspecified = true;
+        options.DefaultApiVersion = new ApiVersion(1, 0);
+        options.ReportApiVersions = true;
+        options.ApiVersionReader = new MediaTypeApiVersionReader("versioning");
+    }
+);
 
 DI.Configure(builder.Services);
 var app = builder.Build();

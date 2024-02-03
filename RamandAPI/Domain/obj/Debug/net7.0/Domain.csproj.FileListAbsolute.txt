@@ -10,3 +10,15 @@ D:\TaskRamand\RamandAPI\Domain\obj\Debug\net7.0\Domain.dll
 D:\TaskRamand\RamandAPI\Domain\obj\Debug\net7.0\refint\Domain.dll
 D:\TaskRamand\RamandAPI\Domain\obj\Debug\net7.0\Domain.pdb
 D:\TaskRamand\RamandAPI\Domain\obj\Debug\net7.0\ref\Domain.dll
+C:\Users\m.shoushtari\Desktop\rmnd\RamandAPI\RamandAPI\Domain\bin\Debug\net7.0\Domain.deps.json
+C:\Users\m.shoushtari\Desktop\rmnd\RamandAPI\RamandAPI\Domain\bin\Debug\net7.0\Domain.dll
+C:\Users\m.shoushtari\Desktop\rmnd\RamandAPI\RamandAPI\Domain\bin\Debug\net7.0\Domain.pdb
+C:\Users\m.shoushtari\Desktop\rmnd\RamandAPI\RamandAPI\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\m.shoushtari\Desktop\rmnd\RamandAPI\RamandAPI\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+C:\Users\m.shoushtari\Desktop\rmnd\RamandAPI\RamandAPI\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+C:\Users\m.shoushtari\Desktop\rmnd\RamandAPI\RamandAPI\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\m.shoushtari\Desktop\rmnd\RamandAPI\RamandAPI\Domain\obj\Debug\net7.0\Domain.sourcelink.json
+C:\Users\m.shoushtari\Desktop\rmnd\RamandAPI\RamandAPI\Domain\obj\Debug\net7.0\Domain.dll
+C:\Users\m.shoushtari\Desktop\rmnd\RamandAPI\RamandAPI\Domain\obj\Debug\net7.0\refint\Domain.dll
+C:\Users\m.shoushtari\Desktop\rmnd\RamandAPI\RamandAPI\Domain\obj\Debug\net7.0\Domain.pdb
+C:\Users\m.shoushtari\Desktop\rmnd\RamandAPI\RamandAPI\Domain\obj\Debug\net7.0\ref\Domain.dll

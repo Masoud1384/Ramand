@@ -2,17 +2,15 @@
 using Application.UserOperations.Commands;
 using Application.UserOperations.IRepositoryApplication;
 using Domain.IRepositories;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.UserSecrets;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace RamandAPI.Controllers
+namespace RamandAPI.V1
 {
+    [ApiVersion("1.0")]
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
@@ -43,7 +41,7 @@ namespace RamandAPI.Controllers
             var users = _userRepository.GetAll();
             if (users != null)
             {
-                return Ok(new { message = "Users retrieved successfully.", users = users });
+                return Ok(new { message = "Users retrieved successfully.", users });
             }
             return NotFound(new { message = "No users found." });
         }
@@ -55,7 +53,7 @@ namespace RamandAPI.Controllers
             var user = _userRepository.GetUserBy(userId);
             if (user != null)
             {
-                return Ok(new { message = "User found.", user = user });
+                return Ok(new { message = "User found.", user });
             }
             return NotFound(new { message = "User not found." });
         }
