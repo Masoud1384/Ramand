@@ -1,7 +1,9 @@
 ﻿using Application.UserOperations.Commands;
 using Application.UserOperations.IRepositoryApplication;
 using Domain.IRepositories;
+using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Cryptography.Xml;
 
 namespace RamandAPI.V2
 {
@@ -26,6 +28,19 @@ namespace RamandAPI.V2
             var user = _userRepositoryApplication.GetUserBy(id);
             if (user != null)
             {
+                user.links = new List<HATEOSDto>
+                {
+                    new HATEOSDto
+                    {
+                        hrref = Url.Action(nameof(Get),"User",new {user.Id },Request.Scheme),
+                        Method = "GET"
+                    },
+                    new HATEOSDto
+                    {
+                        hrref = Url.Action(nameof(V1.UserController.Delete),"User",new {username = user.Username},Request.Scheme),
+                        Method = "DELETE"
+                    }
+                };
                 return Ok(user);
             }
             return BadRequest();
@@ -38,6 +53,19 @@ namespace RamandAPI.V2
             var users = _userRepositoryApplication.GetAll();
             if (users.Count() > 0)
             {
+                users.Select(u => u.links = new List<HATEOSDto>
+                {
+                    new HATEOSDto
+                    {
+                        hrref = Url.Action(nameof(Get),"User",new {u.Id },Request.Scheme),
+                        Method = "GET"
+                    },
+                    new HATEOSDto
+                    {
+                        hrref = Url.Action(nameof(V1.UserController.Delete),"User",new {username = u.Username},Request.Scheme),
+                        Method = "DELETE"
+                    }
+                });
                 return Ok(users);
             }
             return NotFound();
@@ -49,6 +77,7 @@ namespace RamandAPI.V2
             var uservm = _userRepositoryApplication.Create(createUserCommand);
             if (uservm != null)
             {
+                var url = Url.Action(nameof(Get), "User", new { id = uservm.Id }, Request.Scheme);
                 return Created("user added", new { uservm });
             }
             return BadRequest();
@@ -59,7 +88,8 @@ namespace RamandAPI.V2
             var isUserUpdated = _userRepositoryApplication.Update(updateUserCommand);
             if (isUserUpdated)
             {
-                return Ok(updateUserCommand);
+                string url = Url.Action(nameof(Get), "Get updated user", new { userId = updateUserCommand.userId }, Request.Scheme);
+                return Ok(url);
             }
             return BadRequest();
         }

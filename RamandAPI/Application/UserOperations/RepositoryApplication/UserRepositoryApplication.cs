@@ -49,14 +49,17 @@ namespace Application.UserOperations.RepositoryApplication
 
         public UserVM GetUserBy(int id)
         {
-            var user = _userRepository.GetUserBy(id);
-            if (user != null)
+            if (id>0)
             {
-                var token = new TokenCommand(user.Id, user.Token.JwtToken, user.Token.Expire, user.Token.RefreshToken, user.Token.RefreshTokenExp);
+                var user = _userRepository.GetUserBy(id);
+                if (user != null)
+                {
+                    var token = new TokenCommand(user.Id, user.Token.JwtToken, user.Token.Expire, user.Token.RefreshToken, user.Token.RefreshTokenExp);
 
-                return new UserVM(user.Id, user.Username, user.Password, token);
+                    return new UserVM(user.Id, user.Username, user.Password, token);
+                }
             }
-            return new UserVM();
+            return null;
         }
 
         public UserVM GetUserBy(string username)

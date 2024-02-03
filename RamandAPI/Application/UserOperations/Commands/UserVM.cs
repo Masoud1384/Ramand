@@ -6,6 +6,7 @@ namespace Application.UserOperations.Commands
 {
     public class UserVM : Domain.Models.User
     {
+        public List<HATEOSDto>? links { get; set; }
         public UserVM(int id,string username,string password,TokenCommand token) 
             :base(id,password,username,new Token(token.JwtToken,token.Expire,token.RefreshToken,token.RefreshTokenExp))
         {
