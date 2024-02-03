@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RamandAPI", "RamandAPI\Rama
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{8CB7B801-AD39-488B-A8B2-6F474DA28491}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{270D2FBC-917B-4AAD-A1FC-70753283EBC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Testing", "Testing\Testing.csproj", "{270D2FBC-917B-4AAD-A1FC-70753283EBC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MqConsumer", "MqConsumer\MqConsumer.csproj", "{FA33D828-2481-4AAD-BB42-A32E147C237D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{270D2FBC-917B-4AAD-A1FC-70753283EBC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{270D2FBC-917B-4AAD-A1FC-70753283EBC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{270D2FBC-917B-4AAD-A1FC-70753283EBC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA33D828-2481-4AAD-BB42-A32E147C237D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA33D828-2481-4AAD-BB42-A32E147C237D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA33D828-2481-4AAD-BB42-A32E147C237D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA33D828-2481-4AAD-BB42-A32E147C237D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
