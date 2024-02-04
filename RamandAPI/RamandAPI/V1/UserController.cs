@@ -2,7 +2,6 @@
 using Application.UserOperations.Commands;
 using Application.UserOperations.IRepositoryApplication;
 using Domain.IRepositories;
-using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;

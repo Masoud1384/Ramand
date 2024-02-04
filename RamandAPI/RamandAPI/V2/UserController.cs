@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using System.Text;
-using System.Text.Json.Serialization;
 
 namespace RamandAPI.V2
 {
@@ -17,6 +16,7 @@ namespace RamandAPI.V2
         private readonly IUserRepositoryApplication _userRepositoryApplication;
         public UserController(IUserRepositoryApplication userRepository, ITokenRepository tokenRepository, IConfiguration configuration) : base(userRepository, tokenRepository, configuration)
         {
+            _userRepositoryApplication = userRepository;
         }
 
         [HttpGet]
@@ -34,7 +34,7 @@ namespace RamandAPI.V2
                     },
                     new HATEOSDto
                     {
-                        hrref = Url.Action(nameof(V1.UserController.Delete),"User",new {username = user.Username},Request.Scheme),
+                        hrref = Url.Action(nameof(Delete),"User",new {username = user.Username},Request.Scheme),
                         Method = "DELETE"
                     }
                 };
@@ -94,10 +94,10 @@ namespace RamandAPI.V2
         [HttpPost]
         public IActionResult MqSender()
         {
-            // var user = _userRepositoryApplication.GetUserBy(1); 
-            var user = new UserVM(1, "@Admin22", "Masoud84");
+            var user = _userRepositoryApplication.GetUserBy(10); 
+            // var user = new UserVM(1, "@Admin22", "Masoud84");
             DataSender(user);
-            return Created("", new { });
+            return Created("queue sent", new {user});
         }
 
         private void DataSender(UserVM userVm)
