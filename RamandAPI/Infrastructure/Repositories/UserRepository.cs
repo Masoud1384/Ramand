@@ -8,7 +8,8 @@ namespace Infrastructure.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private readonly string _connectionString = "Server=.;DataBase=Ramand;Trusted_Connection=True;Encrypt=False;";
+        private readonly string _connectionString = "Server=.\\Ramand;Database=Ramand;User Id=sa;Password=@Admin22;Encrypt=False;"
+;
 
         public int Create(User user)
         {

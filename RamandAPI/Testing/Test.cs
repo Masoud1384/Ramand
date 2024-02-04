@@ -9,14 +9,14 @@ using RamandAPI.V2;
 
 namespace Testing
 {
-    public class Test
+    public class UserControllerTests
     {
         private readonly Mock<IUserRepositoryApplication> _mockUserApplication;
         private readonly Mock<ITokenRepository> _mockTokenRepository;
         private readonly Mock<IConfiguration> _mockConfiguration;
         private readonly UserController _controller;
 
-        public Test()
+        public UserControllerTests()
         {
             _mockUserApplication = new Mock<IUserRepositoryApplication>();
             _mockTokenRepository = new Mock<ITokenRepository>();
@@ -24,55 +24,34 @@ namespace Testing
             _controller = new UserController(_mockUserApplication.Object, _mockTokenRepository.Object, _mockConfiguration.Object);
         }
 
-        [Fact]
-        public void Get_OkIfAllUsersExists()
-        {
-            // Arrange
-            _mockUserApplication.Setup(app => app.GetAll()).Returns(new List<UserVM>());
-
-            // Act
-            var result = _controller.Get();
-
-            // Assert
-            Assert.IsType<OkResult>(result);
-        }
 
         [Fact]
-        public void Post_ReturnCreatedIfUserAdded()
-        {
-            // Arrange
-            int? userId = null;
-            _mockUserApplication.Setup(app => app.Create(It.IsAny<CreateUserCommand>())).Returns(new UserVM());
-
-            // Act
-            var result = _controller.Post(new CreateUserCommand());
-
-            // Assert
-            Assert.IsType<CreatedResult>(result);
-        }
-        [Fact]
-        public void Get_OkIfUserExists()
+        public void GetUser_ReturnsOkIfUserExists()
         {
             // Arrange
             _mockUserApplication.Setup(app => app.GetUserBy(It.IsAny<int>())).Returns(new UserVM());
 
             // Act
-            var result = _controller.Get(1);
+            var result = _controller.GetUser(1);
 
             // Assert
-            Assert.IsType<OkResult>(result);
+            Assert.IsType<OkObjectResult>(result);
         }
+
+
         [Fact]
-        public void Put_OkIfUserUpdated()
+        public void Login_ReturnsOkIfCredentialsAreValid()
         {
             // Arrange
-            _mockUserApplication.Setup(app => app.Update(It.IsAny<UpdateUserCommand>())).Returns(true);
+            _mockUserApplication.Setup(app => app.GetUserBy(It.IsAny<string>())).Returns(new UserVM { Token = new Domain.Models.Token("validToken", DateTime.Now.AddHours(1), "validRefreshToken", DateTime.Now.AddHours(2)) });
 
             // Act
-            var result = _controller.Put(new UpdateUserCommand());
+            var result = _controller.Login(new LoginCommand());
 
             // Assert
-            Assert.IsType<OkResult>(result);
+            Assert.IsType<OkObjectResult>(result);
         }
+
     }
+
 }

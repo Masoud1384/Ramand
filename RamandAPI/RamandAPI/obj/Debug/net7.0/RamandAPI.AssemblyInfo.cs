@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RamandAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1dedb4cd9a959d11c5f81ca2f86eea452735e831")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9bdc2351ee767bc49c8a3e6b322adfe566746b63")]
 [assembly: System.Reflection.AssemblyProductAttribute("RamandAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RamandAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
