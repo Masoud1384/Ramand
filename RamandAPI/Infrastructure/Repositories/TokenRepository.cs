@@ -10,7 +10,7 @@ namespace Infrastructure.Repositories
 {
     public class TokenRepository : ITokenRepository
     {
-        private readonly string _connectionString = "Server=.;DataBase=Ramand;Trusted_Connection=True;Encrypt=False;";
+        private readonly string _connectionString = "Server=.\\Ramand;Database=Ramand;User Id=sa;Password=@Admin22;Encrypt=False;";
         private readonly IUserRepository _userRepository;
 
         public TokenRepository(IUserRepository userRepository)

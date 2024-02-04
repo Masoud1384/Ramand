@@ -44,7 +44,6 @@ namespace RamandAPI.V2
         }
 
         [HttpGet("getpr")]
-
         public IActionResult Get()
         {
             var users = _userRepositoryApplication.GetAll();
@@ -79,6 +78,7 @@ namespace RamandAPI.V2
             }
             return BadRequest();
         }
+
         [HttpPut]
         public IActionResult Put(UpdateUserCommand updateUserCommand)
         {
@@ -99,7 +99,6 @@ namespace RamandAPI.V2
             DataSender(user);
             return Created("", new { });
         }
-
 
         private void DataSender(UserVM userVm)
         {

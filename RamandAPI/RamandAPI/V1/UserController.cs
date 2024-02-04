@@ -2,6 +2,7 @@
 using Application.UserOperations.Commands;
 using Application.UserOperations.IRepositoryApplication;
 using Domain.IRepositories;
+using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -26,7 +27,6 @@ namespace RamandAPI.V1
         }
 
 
-
         [HttpGet]
         [Route("SelectAll")]
         public IActionResult GetAllUsers([FromHeader] string jwtToken)
@@ -38,11 +38,23 @@ namespace RamandAPI.V1
             var users = _userRepository.GetAll();
             if (users != null)
             {
+                users.Select(u => u.links = new List<HATEOSDto>
+                {
+                    new HATEOSDto
+                    {
+                        hrref = Url.Action(nameof(GetUser),"User",new {u.Id },Request.Scheme),
+                        Method = "GET"
+                    },
+                    new HATEOSDto
+                    {
+                        hrref = Url.Action(nameof(V1.UserController.Delete),"User",new {username = u.Username},Request.Scheme),
+                        Method = "DELETE"
+                    }
+                });
                 return Ok(new { message = "Users retrieved successfully.", users });
             }
             return NotFound(new { message = "No users found." });
         }
-
 
         [HttpGet("{userId}")]
         public IActionResult GetUser(int userId)
@@ -50,6 +62,14 @@ namespace RamandAPI.V1
             var user = _userRepository.GetUserBy(userId);
             if (user != null)
             {
+                user.links = new List<HATEOSDto>
+                {
+                    new HATEOSDto
+                    {
+                        hrref = Url.Action(nameof(V1.UserController.Delete),"User",new {username = user.Username},Request.Scheme),
+                        Method = "DELETE"
+                    }
+                };
                 return Ok(new { message = "User found.", user });
             }
             return NotFound(new { message = "User not found." });
@@ -73,7 +93,6 @@ namespace RamandAPI.V1
             return Conflict(new { message = "Username already exists." });
         }
 
-
         [HttpPost]
         [Route("Login")]
         public IActionResult Login([FromBody] LoginCommand user)
@@ -94,7 +113,6 @@ namespace RamandAPI.V1
             }
             return Unauthorized(new { message = "Invalid credentials." });
         }
-
 
         [HttpPost("RefreshToken")]
         public IActionResult RefreshToken(string refreshToken)
@@ -163,6 +181,5 @@ namespace RamandAPI.V1
             }
             return false;
         }
-
     }
 }
