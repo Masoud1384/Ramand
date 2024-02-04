@@ -1,6 +1,8 @@
 ﻿using Application.UserOperations.Commands;
 using Application.UserOperations.IRepositoryApplication;
+using Domain.IRepositories;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Moq;
 using RamandAPI.V2;
 
@@ -9,14 +11,17 @@ namespace Testing
 {
     public class Test
     {
-
         private readonly Mock<IUserRepositoryApplication> _mockUserApplication;
+        private readonly Mock<ITokenRepository> _mockTokenRepository;
+        private readonly Mock<IConfiguration> _mockConfiguration;
         private readonly UserController _controller;
 
         public Test()
         {
             _mockUserApplication = new Mock<IUserRepositoryApplication>();
-            _controller = new UserController(_mockUserApplication.Object);
+            _mockTokenRepository = new Mock<ITokenRepository>();
+            _mockConfiguration = new Mock<IConfiguration>();
+            _controller = new UserController(_mockUserApplication.Object, _mockTokenRepository.Object, _mockConfiguration.Object);
         }
 
         [Fact]

@@ -1,9 +1,11 @@
 ﻿using Application.UserOperations.Commands;
 using Application.UserOperations.IRepositoryApplication;
 using Domain.IRepositories;
-using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Cryptography.Xml;
+using Newtonsoft.Json;
+using RabbitMQ.Client;
+using System.Text;
+using System.Text.Json.Serialization;
 
 namespace RamandAPI.V2
 {
@@ -15,11 +17,6 @@ namespace RamandAPI.V2
         private readonly IUserRepositoryApplication _userRepositoryApplication;
         public UserController(IUserRepositoryApplication userRepository, ITokenRepository tokenRepository, IConfiguration configuration) : base(userRepository, tokenRepository, configuration)
         {
-        }
-        public UserController(IUserRepositoryApplication userRepository)
-            : base(userRepository)
-        {
-            this._userRepositoryApplication = userRepository;
         }
 
         [HttpGet]
@@ -71,7 +68,7 @@ namespace RamandAPI.V2
             return NotFound();
         }
 
-        [HttpPost]
+        [HttpPost("PostUser")]
         public IActionResult Post(CreateUserCommand createUserCommand)
         {
             var uservm = _userRepositoryApplication.Create(createUserCommand);
@@ -92,6 +89,46 @@ namespace RamandAPI.V2
                 return Ok(url);
             }
             return BadRequest();
+        }
+
+        [HttpPost]
+        public IActionResult MqSender()
+        {
+            // var user = _userRepositoryApplication.GetUserBy(1); 
+            var user = new UserVM(1, "@Admin22", "Masoud84");
+            DataSender(user);
+            return Created("", new { });
+        }
+
+
+        private void DataSender(UserVM userVm)
+        {
+            var factory = new ConnectionFactory();
+            factory.Uri = new Uri("amqp://guest:guest@localhost:5672");
+            var cnn = factory.CreateConnection();
+            var channel = cnn.CreateModel();
+
+            string exchangeName = "MExchange";
+            string routingKey = "M-routing-key";
+            var queueName = "MQueue";
+
+            channel.ExchangeDeclare(exchangeName, ExchangeType.Direct);
+            channel.QueueDeclare(queueName, false, false, false, null);
+            channel.QueueBind(queueName, exchangeName, routingKey, null);
+
+            var jsonData = JsonConvert.SerializeObject(userVm);
+            var messageBody = Encoding.UTF8.GetBytes(jsonData);
+
+            var properties = channel.CreateBasicProperties();
+            properties.Persistent = true;
+
+            // we set the message TTL to 10 seconds
+            properties.Expiration = "10000";
+
+            channel.BasicPublish(exchangeName, routingKey, properties, messageBody);
+
+            channel.Close();
+            cnn.Close();
         }
     }
 }

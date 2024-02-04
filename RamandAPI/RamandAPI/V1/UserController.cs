@@ -25,10 +25,6 @@ namespace RamandAPI.V1
             _configuration = configuration;
         }
 
-        public UserController(IUserRepositoryApplication userRepository)
-        {
-            _userRepository = userRepository;
-        }
 
 
         // سیستم تایید هویت و ثبت نام رو با استفاده از نام و رمز کاربر ساختیم و با استفاده از دپر

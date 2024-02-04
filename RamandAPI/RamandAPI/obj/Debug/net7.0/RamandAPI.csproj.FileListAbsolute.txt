@@ -108,3 +108,5 @@ C:\Users\m.shoushtari\Desktop\rmnd\RamandAPI\RamandAPI\RamandAPI\obj\Debug\net7.
 C:\Users\m.shoushtari\Desktop\rmnd\RamandAPI\RamandAPI\RamandAPI\obj\Debug\net7.0\RamandAPI.pdb
 C:\Users\m.shoushtari\Desktop\rmnd\RamandAPI\RamandAPI\RamandAPI\obj\Debug\net7.0\RamandAPI.genruntimeconfig.cache
 C:\Users\m.shoushtari\Desktop\rmnd\RamandAPI\RamandAPI\RamandAPI\obj\Debug\net7.0\ref\RamandAPI.dll
+C:\Users\m.shoushtari\Desktop\rmnd\RamandAPI\RamandAPI\RamandAPI\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\m.shoushtari\Desktop\rmnd\RamandAPI\RamandAPI\RamandAPI\bin\Debug\net7.0\RabbitMQ.Client.dll
