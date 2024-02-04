@@ -112,9 +112,24 @@ namespace RamandAPI.V2
             string routingKey = "M-routing-key";
             var queueName = "MQueue";
 
+            var deadLetterExchangeName = "deadLetterExName";
+            var deadLetterQuName = "deadLetterQuName";
+
+
+
             channel.ExchangeDeclare(exchangeName, ExchangeType.Direct);
-            channel.QueueDeclare(queueName, false, false, false, null);
+            channel.ExchangeDeclare(deadLetterExchangeName, ExchangeType.Direct);
+            // and we build an oher line in order to send the data to it after 10 seconds if it wouldn't proccessed 
+            var arguments = new Dictionary<string, object>
+            {
+                { "x-dead-letter-exchange", deadLetterExchangeName }
+            };
+            channel.QueueDeclare(queueName, false, false, false, arguments);
+            channel.QueueDeclare(deadLetterQuName, false, false, false, null);
+
             channel.QueueBind(queueName, exchangeName, routingKey, null);
+            channel.QueueBind(deadLetterQuName, deadLetterExchangeName, routingKey, null);
+
 
             var jsonData = JsonConvert.SerializeObject(userVm);
             var messageBody = Encoding.UTF8.GetBytes(jsonData);
