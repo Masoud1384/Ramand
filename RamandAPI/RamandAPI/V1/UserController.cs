@@ -57,7 +57,7 @@ namespace RamandAPI.V1
                     u.Username,
                     u.Password
                 });
-                Log.Error("{@users}", logData);
+                Log.Information("{@users}", logData);
 
                 return Ok(new { message = "Users retrieved successfully.",logData });
             }

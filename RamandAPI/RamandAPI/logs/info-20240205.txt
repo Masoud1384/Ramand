@@ -1,0 +1,281 @@
+2024-02-05 12:31:03.631 +03:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-02-05 12:31:03.719 +03:30 [DBG] Hosting starting
+2024-02-05 12:31:03.747 +03:30 [INF] User profile is available. Using 'C:\Users\m.shoushtari\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-05 12:31:03.750 +03:30 [DBG] Reading data from file 'C:\Users\m.shoushtari\AppData\Local\ASP.NET\DataProtection-Keys\key-e6c72934-a63f-4d50-bb3f-39b4d6ed0312.xml'.
+2024-02-05 12:31:03.758 +03:30 [DBG] Found key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312}.
+2024-02-05 12:31:03.765 +03:30 [DBG] Considering key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312} with expiration date 2024-05-05 06:33:11Z as default key.
+2024-02-05 12:31:03.767 +03:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-02-05 12:31:03.768 +03:30 [DBG] Decrypting secret element using Windows DPAPI.
+2024-02-05 12:31:03.769 +03:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-02-05 12:31:03.772 +03:30 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-02-05 12:31:03.773 +03:30 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-02-05 12:31:03.774 +03:30 [DBG] Using key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312} as the default key.
+2024-02-05 12:31:03.774 +03:30 [DBG] Key ring with default key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312} was loaded during application startup.
+2024-02-05 12:31:03.938 +03:30 [INF] Now listening on: https://localhost:7028
+2024-02-05 12:31:03.938 +03:30 [INF] Now listening on: http://localhost:5038
+2024-02-05 12:31:03.938 +03:30 [DBG] Loaded hosting startup assembly RamandAPI
+2024-02-05 12:31:03.938 +03:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-02-05 12:31:03.938 +03:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-02-05 12:31:03.938 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-05 12:31:03.938 +03:30 [INF] Hosting environment: Development
+2024-02-05 12:31:03.938 +03:30 [INF] Content root path: D:\Projects\RamandAPI\RamandAPI\RamandAPI
+2024-02-05 12:31:03.938 +03:30 [DBG] Hosting started
+2024-02-05 12:31:04.104 +03:30 [DBG] Connection id "0HN1653TP672S" accepted.
+2024-02-05 12:31:04.104 +03:30 [DBG] Connection id "0HN1653TP672R" accepted.
+2024-02-05 12:31:04.104 +03:30 [DBG] Connection id "0HN1653TP672S" started.
+2024-02-05 12:31:04.104 +03:30 [DBG] Connection id "0HN1653TP672R" started.
+2024-02-05 12:31:11.727 +03:30 [DBG] Connection id "0HN1653TP672T" accepted.
+2024-02-05 12:31:11.727 +03:30 [DBG] Connection id "0HN1653TP672T" started.
+2024-02-05 12:31:11.815 +03:30 [DBG] Connection 0HN1653TP672T established using the following protocol: "Tls12"
+2024-02-05 12:31:11.908 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2024-02-05 12:31:12.072 +03:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-02-05 12:31:12.105 +03:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-02-05 12:31:12.105 +03:30 [DBG] Request did not match any endpoints
+2024-02-05 12:31:12.237 +03:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-02-05 12:31:12.254 +03:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-02-05 12:31:12.257 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 352.8688ms
+2024-02-05 12:31:12.265 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2024-02-05 12:31:12.265 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2024-02-05 12:31:12.278 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 12.2657ms
+2024-02-05 12:31:13.026 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 760.5004ms
+2024-02-05 12:31:13.065 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2024-02-05 12:31:13.065 +03:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-02-05 12:31:13.065 +03:30 [DBG] Request did not match any endpoints
+2024-02-05 12:31:13.183 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 118.4930ms
+2024-02-05 12:31:14.120 +03:30 [DBG] Authentication of the HTTPS connection timed out.
+2024-02-05 12:31:14.120 +03:30 [DBG] Authentication of the HTTPS connection timed out.
+2024-02-05 12:31:14.123 +03:30 [DBG] Connection id "0HN1653TP672R" stopped.
+2024-02-05 12:31:14.123 +03:30 [DBG] Connection id "0HN1653TP672S" stopped.
+2024-02-05 12:31:14.123 +03:30 [DBG] Connection id "0HN1653TP672S" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-02-05 12:31:14.123 +03:30 [DBG] Connection id "0HN1653TP672R" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-02-05 12:31:14.311 +03:30 [DBG] Connection id "0HN1653TP672T" received FIN.
+2024-02-05 12:31:14.313 +03:30 [DBG] The connection queue processing loop for 0HN1653TP672T completed.
+2024-02-05 12:31:14.315 +03:30 [DBG] Connection id "0HN1653TP672T" is closed. The last processed stream ID was 7.
+2024-02-05 12:31:14.316 +03:30 [DBG] Connection id "0HN1653TP672T" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-02-05 12:31:14.321 +03:30 [DBG] Connection id "0HN1653TP672T" stopped.
+2024-02-05 12:31:45.175 +03:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-02-05 12:31:45.349 +03:30 [DBG] Hosting starting
+2024-02-05 12:31:45.375 +03:30 [INF] User profile is available. Using 'C:\Users\m.shoushtari\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-05 12:31:45.378 +03:30 [DBG] Reading data from file 'C:\Users\m.shoushtari\AppData\Local\ASP.NET\DataProtection-Keys\key-e6c72934-a63f-4d50-bb3f-39b4d6ed0312.xml'.
+2024-02-05 12:31:45.385 +03:30 [DBG] Found key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312}.
+2024-02-05 12:31:45.392 +03:30 [DBG] Considering key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312} with expiration date 2024-05-05 06:33:11Z as default key.
+2024-02-05 12:31:45.394 +03:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-02-05 12:31:45.396 +03:30 [DBG] Decrypting secret element using Windows DPAPI.
+2024-02-05 12:31:45.397 +03:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-02-05 12:31:45.401 +03:30 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-02-05 12:31:45.402 +03:30 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-02-05 12:31:45.403 +03:30 [DBG] Using key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312} as the default key.
+2024-02-05 12:31:45.404 +03:30 [DBG] Key ring with default key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312} was loaded during application startup.
+2024-02-05 12:31:45.524 +03:30 [INF] Now listening on: https://localhost:7028
+2024-02-05 12:31:45.524 +03:30 [INF] Now listening on: http://localhost:5038
+2024-02-05 12:31:45.524 +03:30 [DBG] Loaded hosting startup assembly RamandAPI
+2024-02-05 12:31:45.524 +03:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-02-05 12:31:45.524 +03:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-02-05 12:31:45.524 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-05 12:31:45.524 +03:30 [INF] Hosting environment: Development
+2024-02-05 12:31:45.524 +03:30 [INF] Content root path: D:\Projects\RamandAPI\RamandAPI\RamandAPI
+2024-02-05 12:31:45.524 +03:30 [DBG] Hosting started
+2024-02-05 12:31:45.813 +03:30 [DBG] Connection id "0HN1654A6UQF1" accepted.
+2024-02-05 12:31:45.813 +03:30 [DBG] Connection id "0HN1654A6UQF3" received FIN.
+2024-02-05 12:31:45.813 +03:30 [DBG] Connection id "0HN1654A6UQF4" received FIN.
+2024-02-05 12:31:45.813 +03:30 [DBG] Connection id "0HN1654A6UQF2" accepted.
+2024-02-05 12:31:45.818 +03:30 [DBG] Connection id "0HN1654A6UQF1" started.
+2024-02-05 12:31:45.818 +03:30 [DBG] Connection id "0HN1654A6UQF2" started.
+2024-02-05 12:31:45.832 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-02-05 12:31:45.832 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-02-05 12:31:45.938 +03:30 [DBG] Connection id "0HN1654A6UQF2" stopped.
+2024-02-05 12:31:45.938 +03:30 [DBG] Connection id "0HN1654A6UQF1" stopped.
+2024-02-05 12:31:45.940 +03:30 [DBG] Connection id "0HN1654A6UQF2" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-02-05 12:31:45.940 +03:30 [DBG] Connection id "0HN1654A6UQF1" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-02-05 12:31:53.611 +03:30 [DBG] Connection id "0HN1654A6UQF5" accepted.
+2024-02-05 12:31:53.612 +03:30 [DBG] Connection id "0HN1654A6UQF5" started.
+2024-02-05 12:31:53.665 +03:30 [DBG] Connection 0HN1654A6UQF5 established using the following protocol: "Tls12"
+2024-02-05 12:31:53.725 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2024-02-05 12:31:53.833 +03:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-02-05 12:31:53.853 +03:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-02-05 12:31:53.853 +03:30 [DBG] Request did not match any endpoints
+2024-02-05 12:31:53.957 +03:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-02-05 12:31:53.974 +03:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-02-05 12:31:53.977 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 253.5317ms
+2024-02-05 12:31:53.986 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2024-02-05 12:31:53.986 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2024-02-05 12:31:53.990 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 4.2871ms
+2024-02-05 12:31:54.018 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.6178ms
+2024-02-05 12:31:54.059 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2024-02-05 12:31:54.059 +03:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-02-05 12:31:54.059 +03:30 [DBG] Request did not match any endpoints
+2024-02-05 12:31:54.151 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 91.9855ms
+2024-02-05 12:31:55.918 +03:30 [DBG] Connection id "0HN1654A6UQF5" received FIN.
+2024-02-05 12:31:55.919 +03:30 [DBG] The connection queue processing loop for 0HN1654A6UQF5 completed.
+2024-02-05 12:31:55.921 +03:30 [DBG] Connection id "0HN1654A6UQF5" is closed. The last processed stream ID was 7.
+2024-02-05 12:31:55.921 +03:30 [DBG] Connection id "0HN1654A6UQF5" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-02-05 12:31:55.924 +03:30 [DBG] Connection id "0HN1654A6UQF5" stopped.
+2024-02-05 12:32:02.234 +03:30 [DBG] Connection id "0HN1654A6UQF6" accepted.
+2024-02-05 12:32:02.234 +03:30 [DBG] Connection id "0HN1654A6UQF6" started.
+2024-02-05 12:32:02.236 +03:30 [DBG] Connection 0HN1654A6UQF6 established using the following protocol: "Tls12"
+2024-02-05 12:32:02.241 +03:30 [INF] Request starting HTTP/2 POST https://localhost:7028/api/User/Login application/json 50
+2024-02-05 12:32:02.246 +03:30 [DBG] 1 candidate(s) found for the request path '/api/User/Login'
+2024-02-05 12:32:02.248 +03:30 [DBG] Endpoint 'RamandAPI.V1.UserController.Login (RamandAPI)' with route pattern 'api/User/Login' is valid for the request path '/api/User/Login'
+2024-02-05 12:32:02.254 +03:30 [DBG] Request matched endpoint 'RamandAPI.V1.UserController.Login (RamandAPI)'
+2024-02-05 12:32:02.255 +03:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-02-05 12:32:02.303 +03:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-02-05 12:32:02.306 +03:30 [INF] Executing endpoint 'RamandAPI.V1.UserController.Login (RamandAPI)'
+2024-02-05 12:32:02.325 +03:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Application.UserOperations.Commands.LoginCommand) on controller RamandAPI.V1.UserController (RamandAPI).
+2024-02-05 12:32:02.326 +03:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-02-05 12:32:02.326 +03:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-02-05 12:32:02.326 +03:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)","Microsoft.AspNetCore.Mvc.ReportApiVersionsAttribute (Order: 0)","Microsoft.AspNetCore.Mvc.Versioning.ApplyContentTypeVersionActionFilter"]
+2024-02-05 12:32:02.326 +03:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-02-05 12:32:02.326 +03:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)","Microsoft.AspNetCore.Mvc.ReportApiVersionsAttribute (Order: 0)"]
+2024-02-05 12:32:02.327 +03:30 [DBG] Executing controller factory for controller RamandAPI.V1.UserController (RamandAPI)
+2024-02-05 12:32:02.328 +03:30 [DBG] Executed controller factory for controller RamandAPI.V1.UserController (RamandAPI)
+2024-02-05 12:32:02.336 +03:30 [DBG] Attempting to bind parameter 'user' of type 'Application.UserOperations.Commands.LoginCommand' ...
+2024-02-05 12:32:02.337 +03:30 [DBG] Attempting to bind parameter 'user' of type 'Application.UserOperations.Commands.LoginCommand' using the name '' in request data ...
+2024-02-05 12:32:02.338 +03:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-02-05 12:32:02.345 +03:30 [DBG] Connection id "0HN1654A6UQF6", Request id "0HN1654A6UQF6:00000001": started reading request body.
+2024-02-05 12:32:02.345 +03:30 [DBG] Connection id "0HN1654A6UQF6", Request id "0HN1654A6UQF6:00000001": done reading request body.
+2024-02-05 12:32:02.352 +03:30 [DBG] JSON input formatter succeeded, deserializing to type 'Application.UserOperations.Commands.LoginCommand'
+2024-02-05 12:32:02.353 +03:30 [DBG] Done attempting to bind parameter 'user' of type 'Application.UserOperations.Commands.LoginCommand'.
+2024-02-05 12:32:02.353 +03:30 [DBG] Done attempting to bind parameter 'user' of type 'Application.UserOperations.Commands.LoginCommand'.
+2024-02-05 12:32:02.353 +03:30 [DBG] Attempting to validate the bound parameter 'user' of type 'Application.UserOperations.Commands.LoginCommand' ...
+2024-02-05 12:32:02.358 +03:30 [DBG] Done attempting to validate the bound parameter 'user' of type 'Application.UserOperations.Commands.LoginCommand'.
+2024-02-05 12:32:02.397 +03:30 [INF] Executing action method RamandAPI.V1.UserController.Login (RamandAPI) - Validation state: "Valid"
+2024-02-05 12:32:07.719 +03:30 [ERR] Object reference not set to an instance of an object.
+2024-02-05 12:32:07.724 +03:30 [INF] Executed action method RamandAPI.V1.UserController.Login (RamandAPI), returned result Microsoft.AspNetCore.Mvc.UnauthorizedObjectResult in 5324.5061ms.
+2024-02-05 12:32:07.726 +03:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-02-05 12:32:07.727 +03:30 [DBG] No information found on request to perform content negotiation.
+2024-02-05 12:32:07.728 +03:30 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-02-05 12:32:07.728 +03:30 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-02-05 12:32:07.728 +03:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-02-05 12:32:07.728 +03:30 [INF] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-05 12:32:07.739 +03:30 [INF] Executed action RamandAPI.V1.UserController.Login (RamandAPI) in 5410.0449ms
+2024-02-05 12:32:07.739 +03:30 [INF] Executed endpoint 'RamandAPI.V1.UserController.Login (RamandAPI)'
+2024-02-05 12:32:07.740 +03:30 [INF] HTTP POST /api/User/Login responded 401 in 5433.7703 ms
+2024-02-05 12:32:07.740 +03:30 [INF] Request finished HTTP/2 POST https://localhost:7028/api/User/Login application/json 50 - 401 - application/json;+charset=utf-8;+versioning=1.0 5499.2538ms
+2024-02-05 12:32:29.812 +03:30 [DBG] Connection id "0HN1654A6UQF6" received FIN.
+2024-02-05 12:32:29.812 +03:30 [DBG] Connection id "0HN1654A6UQF6" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-02-05 12:32:29.812 +03:30 [DBG] Connection id "0HN1654A6UQF6" is closed. The last processed stream ID was 1.
+2024-02-05 12:32:29.813 +03:30 [DBG] The connection queue processing loop for 0HN1654A6UQF6 completed.
+2024-02-05 12:32:29.813 +03:30 [DBG] Connection id "0HN1654A6UQF6" stopped.
+2024-02-05 12:33:18.218 +03:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-02-05 12:33:18.313 +03:30 [DBG] Hosting starting
+2024-02-05 12:33:18.349 +03:30 [INF] User profile is available. Using 'C:\Users\m.shoushtari\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-05 12:33:18.356 +03:30 [DBG] Reading data from file 'C:\Users\m.shoushtari\AppData\Local\ASP.NET\DataProtection-Keys\key-e6c72934-a63f-4d50-bb3f-39b4d6ed0312.xml'.
+2024-02-05 12:33:18.367 +03:30 [DBG] Found key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312}.
+2024-02-05 12:33:18.377 +03:30 [DBG] Considering key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312} with expiration date 2024-05-05 06:33:11Z as default key.
+2024-02-05 12:33:18.380 +03:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-02-05 12:33:18.382 +03:30 [DBG] Decrypting secret element using Windows DPAPI.
+2024-02-05 12:33:18.384 +03:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-02-05 12:33:18.388 +03:30 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-02-05 12:33:18.389 +03:30 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-02-05 12:33:18.391 +03:30 [DBG] Using key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312} as the default key.
+2024-02-05 12:33:18.392 +03:30 [DBG] Key ring with default key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312} was loaded during application startup.
+2024-02-05 12:33:18.533 +03:30 [INF] Now listening on: https://localhost:7028
+2024-02-05 12:33:18.533 +03:30 [INF] Now listening on: http://localhost:5038
+2024-02-05 12:33:18.533 +03:30 [DBG] Loaded hosting startup assembly RamandAPI
+2024-02-05 12:33:18.533 +03:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-02-05 12:33:18.533 +03:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-02-05 12:33:18.534 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-05 12:33:18.534 +03:30 [INF] Hosting environment: Development
+2024-02-05 12:33:18.534 +03:30 [INF] Content root path: D:\Projects\RamandAPI\RamandAPI\RamandAPI
+2024-02-05 12:33:18.534 +03:30 [DBG] Hosting started
+2024-02-05 12:33:18.879 +03:30 [DBG] Connection id "0HN16555UGAIP" received FIN.
+2024-02-05 12:33:18.879 +03:30 [DBG] Connection id "0HN16555UGAIO" received FIN.
+2024-02-05 12:33:18.885 +03:30 [DBG] Connection id "0HN16555UGAIO" accepted.
+2024-02-05 12:33:18.885 +03:30 [DBG] Connection id "0HN16555UGAIP" accepted.
+2024-02-05 12:33:18.886 +03:30 [DBG] Connection id "0HN16555UGAIP" started.
+2024-02-05 12:33:18.886 +03:30 [DBG] Connection id "0HN16555UGAIO" started.
+2024-02-05 12:33:18.898 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-02-05 12:33:18.898 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-02-05 12:33:18.923 +03:30 [DBG] Connection id "0HN16555UGAIP" stopped.
+2024-02-05 12:33:18.923 +03:30 [DBG] Connection id "0HN16555UGAIO" stopped.
+2024-02-05 12:33:18.924 +03:30 [DBG] Connection id "0HN16555UGAIP" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-02-05 12:33:18.924 +03:30 [DBG] Connection id "0HN16555UGAIO" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-02-05 12:33:26.494 +03:30 [DBG] Connection id "0HN16555UGAIQ" accepted.
+2024-02-05 12:33:26.494 +03:30 [DBG] Connection id "0HN16555UGAIQ" started.
+2024-02-05 12:33:26.533 +03:30 [DBG] Connection 0HN16555UGAIQ established using the following protocol: "Tls12"
+2024-02-05 12:33:26.580 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2024-02-05 12:33:26.680 +03:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-02-05 12:33:26.703 +03:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-02-05 12:33:26.703 +03:30 [DBG] Request did not match any endpoints
+2024-02-05 12:33:26.807 +03:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-02-05 12:33:26.822 +03:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-02-05 12:33:26.825 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 247.0907ms
+2024-02-05 12:33:26.831 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2024-02-05 12:33:26.831 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2024-02-05 12:33:26.836 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 5.1671ms
+2024-02-05 12:33:26.865 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 34.2913ms
+2024-02-05 12:33:26.904 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2024-02-05 12:33:26.904 +03:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-02-05 12:33:26.905 +03:30 [DBG] Request did not match any endpoints
+2024-02-05 12:33:26.996 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 91.5376ms
+2024-02-05 12:33:28.728 +03:30 [DBG] Connection id "0HN16555UGAIQ" received FIN.
+2024-02-05 12:33:28.729 +03:30 [DBG] The connection queue processing loop for 0HN16555UGAIQ completed.
+2024-02-05 12:33:28.731 +03:30 [DBG] Connection id "0HN16555UGAIQ" is closed. The last processed stream ID was 7.
+2024-02-05 12:33:28.732 +03:30 [DBG] Connection id "0HN16555UGAIQ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-02-05 12:33:28.746 +03:30 [DBG] Connection id "0HN16555UGAIQ" stopped.
+2024-02-05 12:34:01.877 +03:30 [DBG] Connection id "0HN16555UGAIR" accepted.
+2024-02-05 12:34:01.881 +03:30 [DBG] Connection id "0HN16555UGAIR" started.
+2024-02-05 12:34:01.890 +03:30 [DBG] Connection 0HN16555UGAIR established using the following protocol: "Tls12"
+2024-02-05 12:34:01.893 +03:30 [INF] Request starting HTTP/2 POST https://localhost:7028/api/User/Login application/json 50
+2024-02-05 12:34:01.896 +03:30 [DBG] 1 candidate(s) found for the request path '/api/User/Login'
+2024-02-05 12:34:01.900 +03:30 [DBG] Endpoint 'RamandAPI.V1.UserController.Login (RamandAPI)' with route pattern 'api/User/Login' is valid for the request path '/api/User/Login'
+2024-02-05 12:34:01.906 +03:30 [DBG] Request matched endpoint 'RamandAPI.V1.UserController.Login (RamandAPI)'
+2024-02-05 12:34:01.908 +03:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-02-05 12:34:01.959 +03:30 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-02-05 12:34:01.963 +03:30 [INF] Executing endpoint 'RamandAPI.V1.UserController.Login (RamandAPI)'
+2024-02-05 12:34:01.989 +03:30 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Application.UserOperations.Commands.LoginCommand) on controller RamandAPI.V1.UserController (RamandAPI).
+2024-02-05 12:34:01.990 +03:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-02-05 12:34:01.990 +03:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-02-05 12:34:01.991 +03:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)","Microsoft.AspNetCore.Mvc.ReportApiVersionsAttribute (Order: 0)","Microsoft.AspNetCore.Mvc.Versioning.ApplyContentTypeVersionActionFilter"]
+2024-02-05 12:34:01.991 +03:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-02-05 12:34:01.991 +03:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)","Microsoft.AspNetCore.Mvc.ReportApiVersionsAttribute (Order: 0)"]
+2024-02-05 12:34:01.992 +03:30 [DBG] Executing controller factory for controller RamandAPI.V1.UserController (RamandAPI)
+2024-02-05 12:34:01.993 +03:30 [DBG] Executed controller factory for controller RamandAPI.V1.UserController (RamandAPI)
+2024-02-05 12:34:02.000 +03:30 [DBG] Attempting to bind parameter 'user' of type 'Application.UserOperations.Commands.LoginCommand' ...
+2024-02-05 12:34:02.002 +03:30 [DBG] Attempting to bind parameter 'user' of type 'Application.UserOperations.Commands.LoginCommand' using the name '' in request data ...
+2024-02-05 12:34:02.003 +03:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-02-05 12:34:02.010 +03:30 [DBG] Connection id "0HN16555UGAIR", Request id "0HN16555UGAIR:00000001": started reading request body.
+2024-02-05 12:34:02.010 +03:30 [DBG] Connection id "0HN16555UGAIR", Request id "0HN16555UGAIR:00000001": done reading request body.
+2024-02-05 12:34:02.017 +03:30 [DBG] JSON input formatter succeeded, deserializing to type 'Application.UserOperations.Commands.LoginCommand'
+2024-02-05 12:34:02.018 +03:30 [DBG] Done attempting to bind parameter 'user' of type 'Application.UserOperations.Commands.LoginCommand'.
+2024-02-05 12:34:02.018 +03:30 [DBG] Done attempting to bind parameter 'user' of type 'Application.UserOperations.Commands.LoginCommand'.
+2024-02-05 12:34:02.018 +03:30 [DBG] Attempting to validate the bound parameter 'user' of type 'Application.UserOperations.Commands.LoginCommand' ...
+2024-02-05 12:34:02.025 +03:30 [DBG] Done attempting to validate the bound parameter 'user' of type 'Application.UserOperations.Commands.LoginCommand'.
+2024-02-05 12:34:02.062 +03:30 [INF] Executing action method RamandAPI.V1.UserController.Login (RamandAPI) - Validation state: "Valid"
+2024-02-05 12:34:02.257 +03:30 [ERR] Exception of type 'System.Exception' was thrown.
+2024-02-05 12:34:02.262 +03:30 [INF] Executed action method RamandAPI.V1.UserController.Login (RamandAPI), returned result Microsoft.AspNetCore.Mvc.UnauthorizedObjectResult in 198.0854ms.
+2024-02-05 12:34:02.264 +03:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-02-05 12:34:02.265 +03:30 [DBG] No information found on request to perform content negotiation.
+2024-02-05 12:34:02.265 +03:30 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-02-05 12:34:02.265 +03:30 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-02-05 12:34:02.266 +03:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-02-05 12:34:02.266 +03:30 [INF] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-02-05 12:34:02.277 +03:30 [INF] Executed action RamandAPI.V1.UserController.Login (RamandAPI) in 284.1295ms
+2024-02-05 12:34:02.277 +03:30 [INF] Executed endpoint 'RamandAPI.V1.UserController.Login (RamandAPI)'
+2024-02-05 12:34:02.278 +03:30 [INF] HTTP POST /api/User/Login responded 401 in 315.2631 ms
+2024-02-05 12:34:02.279 +03:30 [INF] Request finished HTTP/2 POST https://localhost:7028/api/User/Login application/json 50 - 401 - application/json;+charset=utf-8;+versioning=1.0 385.8636ms
+2024-02-05 12:34:20.974 +03:30 [DBG] Connection id "0HN16555UGAIR" received FIN.
+2024-02-05 12:34:20.974 +03:30 [DBG] Connection id "0HN16555UGAIR" is closed. The last processed stream ID was 1.
+2024-02-05 12:34:20.974 +03:30 [DBG] Connection id "0HN16555UGAIR" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-02-05 12:34:20.974 +03:30 [DBG] The connection queue processing loop for 0HN16555UGAIR completed.
+2024-02-05 12:34:20.975 +03:30 [DBG] Connection id "0HN16555UGAIR" stopped.

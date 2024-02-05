@@ -1,0 +1,2 @@
+{"Timestamp":"2024-02-05T12:32:07.7192146+03:30","Level":"Error","MessageTemplate":"Object reference not set to an instance of an object.","TraceId":"67b3d005d5a05cad76058bd3ba6c567c","SpanId":"88403f4a3f6b93c5"}
+{"Timestamp":"2024-02-05T12:34:02.2575364+03:30","Level":"Error","MessageTemplate":"Exception of type 'System.Exception' was thrown.","TraceId":"e827abf55c019c641336c0bf40c8a031","SpanId":"836ac643fee898a2"}

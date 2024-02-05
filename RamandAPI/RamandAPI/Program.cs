@@ -5,6 +5,8 @@ using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Serilog;
+using Serilog.Events;
+using Serilog.Formatting.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,16 +36,14 @@ builder.Services.AddAuthentication(option =>
 
 var errorLogFilePath = "logs/errors-.txt";
 Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Error()
-    .WriteTo.File(errorLogFilePath, rollingInterval: RollingInterval.Day)
-    .CreateLogger();
-
-//var infoLogFilePath = "logs/information-.txt";
-//Log.Logger = new LoggerConfiguration()
-//    .MinimumLevel.Information()
-//    .WriteTo.File(infoLogFilePath, rollingInterval: RollingInterval.Day)
-//    .CreateLogger();
-
+                            .WriteTo.Console()
+                            .WriteTo.File(new JsonFormatter(),
+                                          "logs/error-.json",
+                                          restrictedToMinimumLevel: LogEventLevel.Error)
+                            .WriteTo.File("logs/info-.txt",
+                                          rollingInterval: RollingInterval.Day)
+                                .MinimumLevel.Debug()
+                            .CreateLogger();
 
 builder.Host.UseSerilog();
 

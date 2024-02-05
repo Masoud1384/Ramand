@@ -117,9 +117,7 @@ namespace Infrastructure.Repositories
 
                     var parameters = new DynamicParameters();
                     parameters.Add("@Username", username, DbType.String);
-
                     var userToken = connection.QueryFirstOrDefault<UserToken>("SelectUserByUsername", parameters, commandType: CommandType.StoredProcedure);
-
                     if (userToken != null)
                     {
                         var user = new User(userToken.Id, userToken.Username, userToken.Password);
@@ -127,7 +125,6 @@ namespace Infrastructure.Repositories
                         user.Token = token;
                         return user;
                     }
-
                     return null;
                 }
             }
