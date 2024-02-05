@@ -33,3 +33,5 @@ D:\Projects\RamandAPI\RamandAPI\Infrastructure\obj\Debug\net7.0\Infrastructure.d
 D:\Projects\RamandAPI\RamandAPI\Infrastructure\obj\Debug\net7.0\refint\Infrastructure.dll
 D:\Projects\RamandAPI\RamandAPI\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb
 D:\Projects\RamandAPI\RamandAPI\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.dll
+D:\Projects\RamandAPI\RamandAPI\Infrastructure\bin\Debug\net7.0\RabbitDI.dll
+D:\Projects\RamandAPI\RamandAPI\Infrastructure\bin\Debug\net7.0\RabbitDI.pdb

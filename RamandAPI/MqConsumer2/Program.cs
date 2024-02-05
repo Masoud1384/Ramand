@@ -1,9 +1,12 @@
 ﻿using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
-using System.Text;
+using RabbitDI.RabbitMqOperation;
+using Microsoft.Extensions.DependencyInjection;
 
-// This consumer has built specifically for Dead letter queue
-
+var serviceCollection = new ServiceCollection();
+serviceCollection.AddScoped<IRabbitmqRepository, RabbitMqRepository>();
+var serviceProvider = serviceCollection.BuildServiceProvider();
+var rabbitRepository = serviceProvider.GetService<IRabbitmqRepository>();
 
 var factory = new ConnectionFactory();
 factory.Uri = new Uri("amqp://guest:guest@localhost:5672");
@@ -19,14 +22,7 @@ channel.QueueDeclare(queueName, false, false, false, null);
 channel.QueueBind(queueName, exchangeName, routingKey, null);
 channel.BasicQos(0, 1, false);
 var consumer = new EventingBasicConsumer(channel);
-consumer.Received += (sender, args) =>
-{
-    
-    var body = args.Body.ToArray();
-    var message = Encoding.UTF8.GetString(body);
-    Console.WriteLine(message);
-    channel.BasicAck(args.DeliveryTag, false);
-};
+rabbitRepository.ReceiverFucntion(channel, consumer);
 var consumerTag = channel.BasicConsume(queueName, false, consumer);
 Console.ReadLine();
 channel.BasicCancel(consumerTag);

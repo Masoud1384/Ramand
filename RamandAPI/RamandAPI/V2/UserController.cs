@@ -94,7 +94,7 @@ namespace RamandAPI.V2
         [HttpPost]
         public IActionResult MqSender()
         {
-            var user = _userRepositoryApplication.GetUserBy(10); 
+            var user = _userRepositoryApplication.GetUserBy(1); 
             // var user = new UserVM(1, "@Admin22", "Masoud84");
             DataSender(user);
             return Created("queue sent", new {user});

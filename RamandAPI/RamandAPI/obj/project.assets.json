@@ -988,6 +988,7 @@
         "dependencies": {
           "Dapper": "2.1.28",
           "Domain": "1.0.0",
+          "RabbitMQ.Client": "6.8.1",
           "System.Data.SqlClient": "4.8.6"
         },
         "compile": {
@@ -1015,6 +1016,7 @@
           "Dapper": "2.1.28",
           "Domain": "1.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "RabbitDI": "1.0.0",
           "Serilog.AspNetCore": "7.0.0",
           "System.Data.SqlClient": "4.8.6"
         },
@@ -1023,6 +1025,19 @@
         },
         "runtime": {
           "bin/placeholder/Infrastructure.dll": {}
+        }
+      },
+      "RabbitDI/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "RabbitMQ.Client": "6.8.1"
+        },
+        "compile": {
+          "bin/placeholder/RabbitDI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RabbitDI.dll": {}
         }
       }
     }
@@ -3122,6 +3137,11 @@
       "type": "project",
       "path": "../Infrastructure/Infrastructure.csproj",
       "msbuildProject": "../Infrastructure/Infrastructure.csproj"
+    },
+    "RabbitDI/1.0.0": {
+      "type": "project",
+      "path": "../RabbitDI/RabbitDI.csproj",
+      "msbuildProject": "../RabbitDI/RabbitDI.csproj"
     }
   },
   "projectFileDependencyGroups": {

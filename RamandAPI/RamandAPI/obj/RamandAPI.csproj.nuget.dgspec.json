@@ -48,6 +48,10 @@
               "target": "Package",
               "version": "[2.1.28, )"
             },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.8.1, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.6, )"
@@ -157,6 +161,9 @@
               },
               "D:\\Projects\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj": {
                 "projectPath": "D:\\Projects\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj"
+              },
+              "D:\\Projects\\RamandAPI\\RamandAPI\\RabbitDI\\RabbitDI.csproj": {
+                "projectPath": "D:\\Projects\\RamandAPI\\RamandAPI\\RabbitDI\\RabbitDI.csproj"
               }
             }
           }
@@ -186,6 +193,67 @@
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projects\\RamandAPI\\RamandAPI\\RabbitDI\\RabbitDI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projects\\RamandAPI\\RamandAPI\\RabbitDI\\RabbitDI.csproj",
+        "projectName": "RabbitDI",
+        "projectPath": "D:\\Projects\\RamandAPI\\RamandAPI\\RabbitDI\\RabbitDI.csproj",
+        "packagesPath": "C:\\Users\\m.shoushtari\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\RamandAPI\\RamandAPI\\RabbitDI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\m.shoushtari\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.8.1, )"
             }
           },
           "imports": [

@@ -135,3 +135,5 @@ D:\Projects\RamandAPI\RamandAPI\RamandAPI\bin\Debug\net7.0\System.Text.Encodings
 D:\Projects\RamandAPI\RamandAPI\RamandAPI\bin\Debug\net7.0\System.Text.Json.dll
 D:\Projects\RamandAPI\RamandAPI\RamandAPI\bin\Debug\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll
 D:\Projects\RamandAPI\RamandAPI\RamandAPI\bin\Debug\net7.0\logs\error-.json
+D:\Projects\RamandAPI\RamandAPI\RamandAPI\bin\Debug\net7.0\RabbitDI.dll
+D:\Projects\RamandAPI\RamandAPI\RamandAPI\bin\Debug\net7.0\RabbitDI.pdb

@@ -1,2 +1,2 @@
-ALTER TABLE YourTableName
+ALTER TABLE users
 ADD CONSTRAINT UC_UserName UNIQUE (username);

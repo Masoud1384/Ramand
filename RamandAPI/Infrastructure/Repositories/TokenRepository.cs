@@ -3,8 +3,6 @@ using Domain.IRepositories;
 using Domain.Models;
 using System.Data.SqlClient;
 using System.Data;
-using System.Text;
-using System.Security.Cryptography;
 using Serilog;
 
 namespace Infrastructure.Repositories
