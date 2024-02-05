@@ -4,6 +4,7 @@ using Application.UserOperations.IRepositoryApplication;
 using Domain.IRepositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -50,7 +51,15 @@ namespace RamandAPI.V1
                         Method = "DELETE"
                     }
                 });
-                return Ok(new { message = "Users retrieved successfully.", users });
+                var logData = users.Select(u => new
+                {
+                    u.Id,
+                    u.Username,
+                    u.Password
+                });
+                Log.Error("{@users}", logData);
+
+                return Ok(new { message = "Users retrieved successfully.",logData });
             }
             return NotFound(new { message = "No users found." });
         }

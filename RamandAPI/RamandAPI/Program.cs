@@ -4,14 +4,16 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
+
 builder.Services.AddSwaggerGen();
 builder.Services.AddAuthentication(option =>
 {
@@ -29,6 +31,22 @@ builder.Services.AddAuthentication(option =>
       ValidAudience = builder.Configuration["JWT:audience"],
       IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:key"]))
   });
+
+var errorLogFilePath = "logs/errors-.txt";
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Error()
+    .WriteTo.File(errorLogFilePath, rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+//var infoLogFilePath = "logs/information-.txt";
+//Log.Logger = new LoggerConfiguration()
+//    .MinimumLevel.Information()
+//    .WriteTo.File(infoLogFilePath, rollingInterval: RollingInterval.Day)
+//    .CreateLogger();
+
+
+builder.Host.UseSerilog();
+
 builder.Services.AddApiVersioning(
     options =>
     {
@@ -38,9 +56,9 @@ builder.Services.AddApiVersioning(
         options.ApiVersionReader = new MediaTypeApiVersionReader("versioning");
     }
 );
-
 DI.Configure(builder.Services);
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -48,10 +66,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
-
+app.UseSerilogRequestLogging();
 app.Run();

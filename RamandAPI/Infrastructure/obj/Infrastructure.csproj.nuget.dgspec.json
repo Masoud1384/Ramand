@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Infrastructure\\Infrastructure.csproj": {}
+    "D:\\Projects\\RamandAPI\\RamandAPI\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Application\\Application.csproj": {
+    "D:\\Projects\\RamandAPI\\RamandAPI\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\Projects\\RamandAPI\\RamandAPI\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Application\\Application.csproj",
+        "projectPath": "D:\\Projects\\RamandAPI\\RamandAPI\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\m.shoushtari\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Application\\obj\\",
+        "outputPath": "D:\\Projects\\RamandAPI\\RamandAPI\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\m.shoushtari\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj"
+              "D:\\Projects\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Projects\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj"
               }
             }
           }
@@ -73,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj": {
+    "D:\\Projects\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Projects\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj",
+        "projectPath": "D:\\Projects\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\m.shoushtari\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Domain\\obj\\",
+        "outputPath": "D:\\Projects\\RamandAPI\\RamandAPI\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\m.shoushtari\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -128,14 +128,14 @@
         }
       }
     },
-    "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\Projects\\RamandAPI\\RamandAPI\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\Projects\\RamandAPI\\RamandAPI\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "D:\\Projects\\RamandAPI\\RamandAPI\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\m.shoushtari\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Infrastructure\\obj\\",
+        "outputPath": "D:\\Projects\\RamandAPI\\RamandAPI\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\m.shoushtari\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -152,11 +152,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Application\\Application.csproj"
+              "D:\\Projects\\RamandAPI\\RamandAPI\\Application\\Application.csproj": {
+                "projectPath": "D:\\Projects\\RamandAPI\\RamandAPI\\Application\\Application.csproj"
               },
-              "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj"
+              "D:\\Projects\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Projects\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj"
               }
             }
           }
@@ -178,6 +178,10 @@
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",

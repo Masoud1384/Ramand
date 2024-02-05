@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using Domain.IRepositories;
 using Domain.Models;
+using Serilog;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -8,7 +9,7 @@ namespace Infrastructure.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private readonly string _connectionString = "Server=.\\Ramand;Database=Ramand;User Id=sa;Password=@Admin22;Encrypt=False;"
+        private readonly string _connectionString = "Server=.;Database=Ramand;User Id=sa;Password=@Admin22;Encrypt=False;"
 ;
 
         public int Create(User user)
@@ -30,10 +31,9 @@ namespace Infrastructure.Repositories
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                throw;
+                Log.Error(ex.Message);
             }
-
+            return -1;
         }
 
         public int Delete(string username)
@@ -52,9 +52,9 @@ namespace Infrastructure.Repositories
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                throw;
+                Log.Error(ex.Message);
             }
+            return -1;
         }
 
         public IEnumerable<User> GetAll()
@@ -71,9 +71,9 @@ namespace Infrastructure.Repositories
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                throw;
+                Log.Error(ex.Message);
             }
+            return null;
         }
 
         public User GetUserBy(int id)
@@ -102,9 +102,9 @@ namespace Infrastructure.Repositories
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                throw;
+                Log.Error(ex.Message);
             }
+            return null;
         }
 
         public User GetUserBy(string username)
@@ -133,9 +133,9 @@ namespace Infrastructure.Repositories
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                throw;
+                Log.Error(ex.Message);
             }
+            return null;
         }
 
         public bool IsUsernameExist(string username)
@@ -211,9 +211,9 @@ namespace Infrastructure.Repositories
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                throw;
+                Log.Error(ex.Message);
             }
+            return -1;
         }
     }
     class UserToken

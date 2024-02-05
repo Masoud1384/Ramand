@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj": {}
+    "D:\\Projects\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj": {
+    "D:\\Projects\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Projects\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj",
+        "projectPath": "D:\\Projects\\RamandAPI\\RamandAPI\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\m.shoushtari\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\m.shoushtari\\Desktop\\rmnd\\RamandAPI\\RamandAPI\\Domain\\obj\\",
+        "outputPath": "D:\\Projects\\RamandAPI\\RamandAPI\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\m.shoushtari\\AppData\\Roaming\\NuGet\\NuGet.Config",
