@@ -22,7 +22,9 @@ channel.QueueDeclare(queueName, false, false, false, null);
 channel.QueueBind(queueName, exchangeName, routingKey, null);
 channel.BasicQos(0, 1, false);
 var consumer = new EventingBasicConsumer(channel);
-rabbitRepository.ReceiverFucntion(channel, consumer);
+
+consumer.Received += rabbitRepository.ReceiverHandler;
+
 var consumerTag = channel.BasicConsume(queueName, false, consumer);
 Console.ReadLine();
 channel.BasicCancel(consumerTag);

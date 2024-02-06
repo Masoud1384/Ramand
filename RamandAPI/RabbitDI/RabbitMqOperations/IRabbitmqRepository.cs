@@ -5,6 +5,6 @@ namespace RabbitDI.RabbitMqOperation
 {
     public interface IRabbitmqRepository
     {
-        void ReceiverFucntion(IModel channel, EventingBasicConsumer consumer);
+        public void ReceiverHandler(object? sender, BasicDeliverEventArgs args);
     }
 }

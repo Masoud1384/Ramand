@@ -26,9 +26,9 @@ channel.BasicQos(0, 1, false);
 
 var consumer = new EventingBasicConsumer(channel);
 
-rabbitRepository.ReceiverFucntion(channel, consumer);
 
-var consumerTag = channel.BasicConsume(queueName,false,consumer);
+consumer.Received += rabbitRepository.ReceiverHandler;
+var consumerTag = channel.BasicConsume(queueName, false, consumer);
 Console.ReadLine();
 
 channel.BasicCancel(consumerTag);
