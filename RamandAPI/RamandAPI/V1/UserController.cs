@@ -51,15 +51,7 @@ namespace RamandAPI.V1
                         Method = "DELETE"
                     }
                 });
-                var logData = users.Select(u => new
-                {
-                    u.Id,
-                    u.Username,
-                    u.Password
-                });
-                Log.Information("{@users}", logData);
-
-                return Ok(new { message = "Users retrieved successfully.",logData });
+                return Ok(new { message = "Users retrieved successfully.", users });
             }
             return NotFound(new { message = "No users found." });
         }
@@ -70,7 +62,7 @@ namespace RamandAPI.V1
             var user = _userRepository.GetUserBy(userId);
             if (user != null)
             {
-                user.links = new List<HATEOSDto>
+                var hateos = new List<HATEOSDto>
                 {
                     new HATEOSDto
                     {
@@ -78,6 +70,7 @@ namespace RamandAPI.V1
                         Method = "DELETE"
                     }
                 };
+                user.links = hateos;
                 return Ok(new { message = "User found.", user });
             }
             return NotFound(new { message = "User not found." });
@@ -91,7 +84,6 @@ namespace RamandAPI.V1
             {
                 var uservm = _userRepository.Create(createUserCommand);
                 var jwtToken = TokenGenerator(uservm);
-                _tokenRepository.SaveToken(uservm.Id, new Domain.Models.Token(jwtToken.JwtToken, jwtToken.Expire, jwtToken.RefreshToken, jwtToken.RefreshTokenExp));
                 var user = _userRepository.GetUserBy(uservm.Username);
                 if (user != null && user.Token != null)
                 {

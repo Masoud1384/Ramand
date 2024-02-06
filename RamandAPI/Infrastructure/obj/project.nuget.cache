@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2EXLzVPj3L1Hk02SmjyhNA9UeSqhnpi43aYHLGN11vVIU8iW90n7s0AxdMbXvRiMM8Yh391TcuzONdJWXwM4IA==",
+  "dgSpecHash": "lYdkFRkeuMkCnLnHBzAqHHIyUua3Z2uTtjJNDHmAgaCpoGleS+SxFIxOSOlq9RY7nXxsif0TBDm8zAvIaH0vgg==",
   "success": true,
   "projectFilePath": "D:\\Projects\\RamandAPI\\RamandAPI\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -23,7 +23,7 @@
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "C:\\Users\\m.shoushtari\\.nuget\\packages\\serilog\\2.12.0\\serilog.2.12.0.nupkg.sha512",
+    "C:\\Users\\m.shoushtari\\.nuget\\packages\\serilog\\3.1.1\\serilog.3.1.1.nupkg.sha512",
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\serilog.aspnetcore\\7.0.0\\serilog.aspnetcore.7.0.0.nupkg.sha512",
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\serilog.extensions.hosting\\7.0.0\\serilog.extensions.hosting.7.0.0.nupkg.sha512",
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\serilog.extensions.logging\\7.0.0\\serilog.extensions.logging.7.0.0.nupkg.sha512",

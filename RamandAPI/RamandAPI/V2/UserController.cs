@@ -25,7 +25,7 @@ namespace RamandAPI.V2
             var user = _userRepositoryApplication.GetUserBy(id);
             if (user != null)
             {
-                user.links = new List<HATEOSDto>
+                List<HATEOSDto> hATEOSDtos = new List<HATEOSDto>
                 {
                     new HATEOSDto
                     {
@@ -38,6 +38,7 @@ namespace RamandAPI.V2
                         Method = "DELETE"
                     }
                 };
+                user.links = hATEOSDtos;
                 return Ok(user);
             }
             return BadRequest();
@@ -49,7 +50,9 @@ namespace RamandAPI.V2
             var users = _userRepositoryApplication.GetAll();
             if (users.Count() > 0)
             {
-                users.Select(u => u.links = new List<HATEOSDto>
+                users.Select(u =>
+                {
+                    List<HATEOSDto> hATEOSDtos = u.links = new List<HATEOSDto>
                 {
                     new HATEOSDto
                     {
@@ -61,6 +64,8 @@ namespace RamandAPI.V2
                         hrref = Url.Action(nameof(V1.UserController.Delete),"User",new {username = u.Username},Request.Scheme),
                         Method = "DELETE"
                     }
+                };
+                    return hATEOSDtos;
                 });
                 return Ok(users);
             }
@@ -114,8 +119,6 @@ namespace RamandAPI.V2
             var deadLetterExchangeName = "deadLetterExName";
             var deadLetterQuName = "deadLetterQuName";
 
-
-
             channel.ExchangeDeclare(exchangeName, ExchangeType.Direct);
             channel.ExchangeDeclare(deadLetterExchangeName, ExchangeType.Direct);
             // and we build an oher line in order to send the data to it after 10 seconds if it wouldn't proccessed 
@@ -128,7 +131,6 @@ namespace RamandAPI.V2
 
             channel.QueueBind(queueName, exchangeName, routingKey, null);
             channel.QueueBind(deadLetterQuName, deadLetterExchangeName, routingKey, null);
-
 
             var jsonData = JsonConvert.SerializeObject(userVm);
             var messageBody = Encoding.UTF8.GetBytes(jsonData);

@@ -46,7 +46,6 @@ namespace Infrastructure.Repositories
 
                     var parameters = new DynamicParameters();
                     parameters.Add("@username", username, DbType.String);
-
                     return connection.Execute("DeleteUser", parameters, commandType: CommandType.StoredProcedure);
                 }
             }
@@ -86,9 +85,7 @@ namespace Infrastructure.Repositories
 
                     var parameters = new DynamicParameters();
                     parameters.Add("@Id", id, DbType.Int32);
-
                     var userToken = connection.QueryFirstOrDefault<UserToken>("SelectUserById", parameters, commandType: CommandType.StoredProcedure);
-
                     if (userToken != null)
                     {
                         var user = new User(userToken.Id, userToken.Username, userToken.Password);
@@ -96,7 +93,6 @@ namespace Infrastructure.Repositories
                         user.Token = token;
                         return user;
                     }
-
                     return null;
                 }
             }
