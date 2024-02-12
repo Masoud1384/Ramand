@@ -59,10 +59,12 @@ namespace RamandAPI.V1
         [HttpGet("{userId}")]
         public IActionResult GetUser(int userId)
         {
-            var user = _userRepository.GetUserBy(userId);
-            if (user != null)
+            try
             {
-                var hateos = new List<HATEOSDto>
+                var user = _userRepository.GetUserBy(userId);
+                if (user != null)
+                {
+                    var hateos = new List<HATEOSDto>
                 {
                     new HATEOSDto
                     {
@@ -70,8 +72,13 @@ namespace RamandAPI.V1
                         Method = "DELETE"
                     }
                 };
-                user.links = hateos;
-                return Ok(new { message = "User found.", user });
+                    user.links = hateos;
+                    return Ok(new { message = "User found.", user });
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
             }
             return NotFound(new { message = "User not found." });
         }

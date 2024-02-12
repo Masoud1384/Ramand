@@ -1,10 +1,13 @@
-﻿namespace Domain.Models
+﻿using System.Text.Json.Serialization;
+
+namespace Domain.Models
 {
     public class User
     {
-        public int Id { get; private set; }
-        public string Username { get; private set; }
-        public string Password { get; private set; }
+        public int Id { get; set; }
+        public string Username { get;  set; }
+        public string Password { get; set; }
+        [JsonIgnore]
         public Token? Token { get; set; }
 
         public User(int id, string password, string username, Token token)
@@ -24,6 +27,11 @@
         public User()
         {
 
+        }
+        public User(string username,string password)
+        {
+            this.Username= username;
+            this.Password = password;
         }
         public User(int userId, string username, string password)
         {

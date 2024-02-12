@@ -112,6 +112,17 @@ namespace Application.UserOperations.RepositoryApplication
             return null;
         }
 
+        public int InsertUsers(List<CreateUserCommand> users)
+        {
+            List<User> userList = users.Select(u => new User(u.username,u.password)).ToList();
+
+            if (userList.Count > 0)
+            {
+                return _userRepository.InsertUsers(userList);
+            }
+            return -1;
+        }
+
         public bool IsUsernameExist(string username)
         {
             if (!string.IsNullOrEmpty(username))

@@ -17,7 +17,9 @@ D:\Projects\RamandAPI\RamandAPI\Application\bin\Debug\net7.0\Application.deps.js
 D:\Projects\RamandAPI\RamandAPI\Application\bin\Debug\net7.0\Application.dll
 D:\Projects\RamandAPI\RamandAPI\Application\bin\Debug\net7.0\Application.pdb
 D:\Projects\RamandAPI\RamandAPI\Application\bin\Debug\net7.0\Domain.dll
+D:\Projects\RamandAPI\RamandAPI\Application\bin\Debug\net7.0\RabbitDI.dll
 D:\Projects\RamandAPI\RamandAPI\Application\bin\Debug\net7.0\Domain.pdb
+D:\Projects\RamandAPI\RamandAPI\Application\bin\Debug\net7.0\RabbitDI.pdb
 D:\Projects\RamandAPI\RamandAPI\Application\obj\Debug\net7.0\Application.csproj.AssemblyReference.cache
 D:\Projects\RamandAPI\RamandAPI\Application\obj\Debug\net7.0\Application.GeneratedMSBuildEditorConfig.editorconfig
 D:\Projects\RamandAPI\RamandAPI\Application\obj\Debug\net7.0\Application.AssemblyInfoInputs.cache

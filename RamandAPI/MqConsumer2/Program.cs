@@ -1,8 +1,8 @@
 ﻿using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using RabbitDI.RabbitMqOperation;
-using Microsoft.Extensions.DependencyInjection;
 
+using Microsoft.Extensions.DependencyInjection;
 var serviceCollection = new ServiceCollection();
 serviceCollection.AddScoped<IRabbitmqRepository, RabbitMqRepository>();
 var serviceProvider = serviceCollection.BuildServiceProvider();
@@ -16,6 +16,7 @@ var channel = cnn.CreateModel();
 string exchangeName = "deadLetterExName";
 string routingKey = "M-routing-key";
 var queueName = "deadLetterQuName";
+
 
 channel.ExchangeDeclare(exchangeName, ExchangeType.Direct);
 channel.QueueDeclare(queueName, false, false, false, null);

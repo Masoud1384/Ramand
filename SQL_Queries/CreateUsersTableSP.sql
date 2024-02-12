@@ -8,8 +8,8 @@ BEGIN
     BEGIN
         CREATE TABLE users (
             id INT IDENTITY(1,1) PRIMARY KEY,
-            [password] NVARCHAR(MAX) NOT NULL,
-            [username] NVARCHAR(255) NOT NULL
+            [password] NVARCHAR(50) NULL,
+            [username] NVARCHAR(128) NULL
         );
     END
 END;

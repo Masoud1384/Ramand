@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using Domain.IRepositories;
 using Domain.Models;
+using Newtonsoft.Json;
 using Serilog;
 using System.Data;
 using System.Data.SqlClient;
@@ -129,6 +130,24 @@ namespace Infrastructure.Repositories
                 Log.Error(ex.Message);
             }
             return null;
+        }
+
+        public int InsertUsers(List<User> users)
+        {
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                {
+                    var json = JsonConvert.SerializeObject(users); 
+                    return connection.Execute("InsertUsers", new { json = json }, commandType: CommandType.StoredProcedure);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex.Message);
+            }
+            return -1;
         }
 
         public bool IsUsernameExist(string username)

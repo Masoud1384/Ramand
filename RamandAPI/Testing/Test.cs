@@ -29,14 +29,19 @@ namespace Testing
         public void GetUser_ReturnsOkIfUserExists()
         {
             // Arrange
-            _mockUserApplication.Setup(app => app.GetUserBy(It.IsAny<int>())).Returns(new UserVM());
+            var mockUserRepository = new Mock<IUserRepository>();
+            var user = new UserVM();
+            mockUserRepository.Setup(repo => repo.GetUserBy(It.IsAny<int>())).Returns(user);
 
             // Act
             var result = _controller.GetUser(1);
 
             // Assert
-            Assert.IsType<OkObjectResult>(result);
+            var okResult = Assert.IsType<OkObjectResult>(result);
+            var returnValue = Assert.IsType<UserVM>(okResult.Value);
+            Assert.Equal(user, returnValue);
         }
+
 
 
         [Fact]

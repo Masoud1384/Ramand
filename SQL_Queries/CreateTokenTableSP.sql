@@ -7,9 +7,9 @@ BEGIN
     CREATE TABLE UserToken
     (
         Id INT PRIMARY KEY FOREIGN KEY REFERENCES users(id),
-        Token NVARCHAR(MAX),
+        Token NVARCHAR(128),
         Expire DATETIME,
-        RefreshToken NVARCHAR(MAX),
+        RefreshToken NVARCHAR(128),
         RefreshTokenExp DATETIME
     )
 END

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Versioning;
 using Serilog;
 using Serilog.Events;
 using Serilog.Formatting.Json;
+using RamandAPI;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -46,7 +47,6 @@ Log.Logger = new LoggerConfiguration()
                             .CreateLogger();
 
 builder.Host.UseSerilog();
-
 builder.Services.AddApiVersioning(
     options =>
     {
@@ -58,7 +58,7 @@ builder.Services.AddApiVersioning(
 );
 DI.Configure(builder.Services);
 var app = builder.Build();
-
+RabbitSender.init();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

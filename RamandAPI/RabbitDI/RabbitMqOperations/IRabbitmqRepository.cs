@@ -5,6 +5,6 @@ namespace RabbitDI.RabbitMqOperation
 {
     public interface IRabbitmqRepository
     {
-        public void ReceiverHandler(object? sender, BasicDeliverEventArgs args);
+        void ReceiverHandler(object? sender, BasicDeliverEventArgs args);
     }
 }

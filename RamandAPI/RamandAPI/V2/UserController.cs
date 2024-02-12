@@ -3,6 +3,7 @@ using Application.UserOperations.IRepositoryApplication;
 using Domain.IRepositories;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using RabbitDI.RabbitMqOperation;
 using RabbitMQ.Client;
 using System.Text;
 
@@ -14,8 +15,10 @@ namespace RamandAPI.V2
     public class UserController : V1.UserController
     {
         private readonly IUserRepositoryApplication _userRepositoryApplication;
-        public UserController(IUserRepositoryApplication userRepository, ITokenRepository tokenRepository, IConfiguration configuration) : base(userRepository, tokenRepository, configuration)
+        private readonly IMessagesRepository _messageRepository;
+        public UserController(IMessagesRepository messagesRepository,IUserRepositoryApplication userRepository, ITokenRepository tokenRepository, IConfiguration configuration) : base(userRepository, tokenRepository, configuration)
         {
+            _messageRepository = messagesRepository;
             _userRepositoryApplication = userRepository;
         }
 
@@ -84,6 +87,13 @@ namespace RamandAPI.V2
             return BadRequest();
         }
 
+        [HttpPost("InsertUsers")]
+        public IActionResult InsertMultipleUsers(List<CreateUserCommand> users)
+        {
+            var affectedColumns = _userRepositoryApplication.InsertUsers(users);
+            return Ok(affectedColumns);
+        }
+
         [HttpPut]
         public IActionResult Put(UpdateUserCommand updateUserCommand)
         {
@@ -99,52 +109,27 @@ namespace RamandAPI.V2
         [HttpPost]
         public IActionResult MqSender()
         {
-            var user = _userRepositoryApplication.GetUserBy(1); 
-            // var user = new UserVM(1, "@Admin22", "Masoud84");
-            DataSender(user);
+            //var user = _userRepositoryApplication.GetUserBy(1); 
+             var user = new UserVM(1, "@Admin22", "Masoud84");
+            var jsonData = JsonConvert.SerializeObject(user);
+            DataSender(jsonData);
+            _messageRepository.InsertMessage(new Domain.Models.Messages(jsonData));
             return Created("queue sent", new {user});
         }
 
-        private void DataSender(UserVM userVm)
+        private void DataSender(string message)
         {
-            var factory = new ConnectionFactory();
-            factory.Uri = new Uri("amqp://guest:guest@localhost:5672");
-            var cnn = factory.CreateConnection();
-            var channel = cnn.CreateModel();
+            var messageBody = Encoding.UTF8.GetBytes(message);
+            var channel = RabbitSender.getterChannel();
 
-            string exchangeName = "MExchange";
-            string routingKey = "M-routing-key";
-            var queueName = "MQueue";
-
-            var deadLetterExchangeName = "deadLetterExName";
-            var deadLetterQuName = "deadLetterQuName";
-
-            channel.ExchangeDeclare(exchangeName, ExchangeType.Direct);
-            channel.ExchangeDeclare(deadLetterExchangeName, ExchangeType.Direct);
-            // and we build an oher line in order to send the data to it after 10 seconds if it wouldn't proccessed 
-            var arguments = new Dictionary<string, object>
+            if (!channel.IsOpen)
             {
-                { "x-dead-letter-exchange", deadLetterExchangeName }
-            };
-            channel.QueueDeclare(queueName, false, false, false, arguments);
-            channel.QueueDeclare(deadLetterQuName, false, false, false, null);
+                channel = RabbitSender.init();
+            }
 
-            channel.QueueBind(queueName, exchangeName, routingKey, null);
-            channel.QueueBind(deadLetterQuName, deadLetterExchangeName, routingKey, null);
-
-            var jsonData = JsonConvert.SerializeObject(userVm);
-            var messageBody = Encoding.UTF8.GetBytes(jsonData);
-
-            var properties = channel.CreateBasicProperties();
-            properties.Persistent = true;
-
-            // we set the message TTL to 10 seconds
-            properties.Expiration = "10000";
-
-            channel.BasicPublish(exchangeName, routingKey, properties, messageBody);
-
-            channel.Close();
-            cnn.Close();
+            channel.BasicPublish("MExchange", "M-routing-key", null, messageBody);
+          
         }
+   
     }
 }

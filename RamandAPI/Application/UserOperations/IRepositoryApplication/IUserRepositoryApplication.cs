@@ -11,5 +11,6 @@ namespace Application.UserOperations.IRepositoryApplication
         UserVM GetUserBy(string username);
         bool IsUsernameExist(string username);
         bool Update(UpdateUserCommand updateUserCommand);
+        int InsertUsers(List<CreateUserCommand> users);
     }
 }

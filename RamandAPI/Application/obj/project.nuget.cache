@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "4LHFwf5uQdG2L0jYrMwpcP8Z+RoP9OXEsu88Kzn+5G9LEmTfQVuSPRF5OZEt8epTM0zy0Q0UVwwVyomQlsSQJQ==",
+  "dgSpecHash": "O27ytg7lihCfnAq10TlyOFYPGdzTsxS4q6DHUS9kE95vwiNMaUzaIN86bita5VuPRb0UAWJ77eIaQgUXo20nlQ==",
   "success": true,
   "projectFilePath": "D:\\Projects\\RamandAPI\\RamandAPI\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\dapper\\2.1.28\\dapper.2.1.28.nupkg.sha512",
+    "C:\\Users\\m.shoushtari\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\m.shoushtari\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\m.shoushtari\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\rabbitmq.client\\6.8.1\\rabbitmq.client.6.8.1.nupkg.sha512",
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

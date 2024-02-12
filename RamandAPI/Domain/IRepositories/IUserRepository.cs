@@ -13,5 +13,7 @@ namespace Domain.IRepositories
         User GetUserBy(int id);
         User GetUserBy(string username);
         bool IsUsernameExist(string username);
+        int InsertUsers(List<User> users);
+
     }
 }
