@@ -6,13 +6,6 @@ namespace RabbitDI.RabbitMqOperation
 {
     public class RabbitMqRepository : IRabbitmqRepository
     {
-        private readonly IRabbitmqRepository _rabbitmqRepository;
-
-        public RabbitMqRepository(IRabbitmqRepository rabbitmqRepository)
-        {
-            _rabbitmqRepository = rabbitmqRepository;
-        }
-
         public void ReceiverHandler(object? sender, BasicDeliverEventArgs args)
         {
             var body = args.Body.ToArray();

@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "O27ytg7lihCfnAq10TlyOFYPGdzTsxS4q6DHUS9kE95vwiNMaUzaIN86bita5VuPRb0UAWJ77eIaQgUXo20nlQ==",
+  "dgSpecHash": "/3HUj3IkXHuzA/xDSbc7aMRI0OfzqKBbODOj6PQLyTbapF++vNkEOsU4qhKT4UCEIAZEFGIN8gJIF6hM18w2RQ==",
   "success": true,
   "projectFilePath": "D:\\Projects\\RamandAPI\\RamandAPI\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\dapper\\2.1.28\\dapper.2.1.28.nupkg.sha512",
+    "C:\\Users\\m.shoushtari\\.nuget\\packages\\mapster\\7.4.0\\mapster.7.4.0.nupkg.sha512",
+    "C:\\Users\\m.shoushtari\\.nuget\\packages\\mapster.core\\1.2.1\\mapster.core.1.2.1.nupkg.sha512",
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

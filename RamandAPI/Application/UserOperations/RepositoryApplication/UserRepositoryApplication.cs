@@ -4,7 +4,6 @@ using Application.UserOperations.IRepositoryApplication;
 using Domain.IRepositories;
 using Domain.Models;
 using Serilog;
-using System.Diagnostics;
 
 namespace Application.UserOperations.RepositoryApplication
 {

@@ -1,5 +1,4 @@
-﻿using RabbitMQ.Client;
-using RabbitMQ.Client.Events;
+﻿using RabbitMQ.Client.Events;
 
 namespace RabbitDI.RabbitMqOperation
 {

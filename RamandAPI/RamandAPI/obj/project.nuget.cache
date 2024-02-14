@@ -1,10 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "/kv5zLf6v1p9zqhAxE+QRkYFtYUtjPt341NaGjcDgL70dbMKrpaBTCdWhAY9QLTmDGg+flrZy5KNbvxlpN0E0w==",
+  "dgSpecHash": "WyQ5M9DSXrzzre+ZOrvSUDm/LHuQ4yjIGFjCqrGJg5X50COHYr97EnCnXlX6/DJ6m3hydOuE3+In+yjyWQNLUQ==",
   "success": true,
   "projectFilePath": "D:\\Projects\\RamandAPI\\RamandAPI\\RamandAPI\\RamandAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\dapper\\2.1.28\\dapper.2.1.28.nupkg.sha512",
+    "C:\\Users\\m.shoushtari\\.nuget\\packages\\hangfire\\1.8.10\\hangfire.1.8.10.nupkg.sha512",
+    "C:\\Users\\m.shoushtari\\.nuget\\packages\\hangfire.aspnetcore\\1.8.10\\hangfire.aspnetcore.1.8.10.nupkg.sha512",
+    "C:\\Users\\m.shoushtari\\.nuget\\packages\\hangfire.core\\1.8.10\\hangfire.core.1.8.10.nupkg.sha512",
+    "C:\\Users\\m.shoushtari\\.nuget\\packages\\hangfire.netcore\\1.8.10\\hangfire.netcore.1.8.10.nupkg.sha512",
+    "C:\\Users\\m.shoushtari\\.nuget\\packages\\hangfire.sqlserver\\1.8.10\\hangfire.sqlserver.1.8.10.nupkg.sha512",
+    "C:\\Users\\m.shoushtari\\.nuget\\packages\\mapster\\7.4.0\\mapster.7.4.0.nupkg.sha512",
+    "C:\\Users\\m.shoushtari\\.nuget\\packages\\mapster.core\\1.2.1\\mapster.core.1.2.1.nupkg.sha512",
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\7.0.15\\microsoft.aspnetcore.authentication.jwtbearer.7.0.15.nupkg.sha512",
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.1.0\\microsoft.aspnetcore.mvc.versioning.5.1.0.nupkg.sha512",
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.15\\microsoft.aspnetcore.openapi.7.0.15.nupkg.sha512",

@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "5vvJ/hebph8UG4GEFBveW5v2gi07TLkBYkiQ1RSaJM4YdbiKaG6Wlkoxf2I9jQC6rablEC38K0L0P5j7KOpkpA==",
+  "dgSpecHash": "bEtmQMy8H3MLAHLDyOEOxsXw8vEn/cLXglIMPRrrwoQXuubc0Nf5gj+nHmeN2/Rp8ZtY/16N7Wie7DmvFeP23g==",
   "success": true,
   "projectFilePath": "D:\\Projects\\RamandAPI\\RamandAPI\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\dapper\\2.1.28\\dapper.2.1.28.nupkg.sha512",
+    "C:\\Users\\m.shoushtari\\.nuget\\packages\\mapster\\7.4.0\\mapster.7.4.0.nupkg.sha512",
+    "C:\\Users\\m.shoushtari\\.nuget\\packages\\mapster.core\\1.2.1\\mapster.core.1.2.1.nupkg.sha512",
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\microsoft.extensions.configuration.binder\\7.0.0\\microsoft.extensions.configuration.binder.7.0.0.nupkg.sha512",
     "C:\\Users\\m.shoushtari\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",

@@ -1,6 +1,5 @@
 ﻿using RabbitMQ.Client;
-using RabbitMQ.Client.Events;
-using System.Threading.Channels;
+using System.Text;
 
 namespace RamandAPI
 {
@@ -29,6 +28,17 @@ namespace RamandAPI
         public static IModel getterChannel()
         {
             return Channel;
+        }
+
+        public static async Task CallApi()
+        {
+            var messageBody = Encoding.UTF8.GetBytes("gharibe ashena");
+            var channel = getterChannel();
+
+            if (!channel.IsOpen)
+                channel = init();
+
+            channel.BasicPublish("MExchange", "M-routing-key", null, messageBody);
         }
     }
 

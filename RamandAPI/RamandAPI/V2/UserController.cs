@@ -75,18 +75,6 @@ namespace RamandAPI.V2
             return NotFound();
         }
 
-        [HttpPost("PostUser")]
-        public IActionResult Post(CreateUserCommand createUserCommand)
-        {
-            var uservm = _userRepositoryApplication.Create(createUserCommand);
-            if (uservm != null)
-            {
-                var url = Url.Action(nameof(Get), "User", new { id = uservm.Id }, Request.Scheme);
-                return Created("user added", new { uservm });
-            }
-            return BadRequest();
-        }
-
         [HttpPost("InsertUsers")]
         public IActionResult InsertMultipleUsers(List<CreateUserCommand> users)
         {
@@ -107,7 +95,7 @@ namespace RamandAPI.V2
         }
 
         [HttpPost]
-        public IActionResult MqSender()
+        public IActionResult Post()
         {
             //var user = _userRepositoryApplication.GetUserBy(1); 
              var user = new UserVM(1, "@Admin22", "Masoud84");

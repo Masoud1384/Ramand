@@ -8,6 +8,7 @@ using Serilog;
 using Serilog.Events;
 using Serilog.Formatting.Json;
 using RamandAPI;
+using Hangfire;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +17,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
-
+builder.Services.AddHangfire(configuration => configuration
+        .UseSqlServerStorage("Server=.;Database=Ramand;User Id=sa;Password=@Admin22;Encrypt=False;"));
 builder.Services.AddSwaggerGen();
 builder.Services.AddAuthentication(option =>
 {
@@ -66,9 +68,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseHangfireDashboard();
+app.UseHangfireServer();
+
+RecurringJob.AddOrUpdate(() => RabbitSender.CallApi(), Cron.Minutely);
+RecurringJob.AddOrUpdate(() => Log.Error("sup"),Cron.Minutely);
+
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
-app.UseSerilogRequestLogging();
 app.Run();
