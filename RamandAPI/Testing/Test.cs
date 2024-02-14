@@ -14,6 +14,7 @@ namespace Testing
         private readonly Mock<IUserRepositoryApplication> _mockUserApplication;
         private readonly Mock<ITokenRepository> _mockTokenRepository;
         private readonly Mock<IConfiguration> _mockConfiguration;
+        private readonly Mock<IMessagesRepository> _mockMessages;
         private readonly UserController _controller;
 
         public UserControllerTests()
@@ -21,7 +22,8 @@ namespace Testing
             _mockUserApplication = new Mock<IUserRepositoryApplication>();
             _mockTokenRepository = new Mock<ITokenRepository>();
             _mockConfiguration = new Mock<IConfiguration>();
-            _controller = new UserController(_mockUserApplication.Object, _mockTokenRepository.Object, _mockConfiguration.Object);
+            _mockMessages = new Mock<IMessagesRepository>();
+            _controller = new UserController(_mockMessages.Object,_mockUserApplication.Object, _mockTokenRepository.Object, _mockConfiguration.Object);
         }
 
 

@@ -20,8 +20,10 @@ D:\Projects\RamandAPI\RamandAPI\Infrastructure\bin\Debug\net7.0\Infrastructure.d
 D:\Projects\RamandAPI\RamandAPI\Infrastructure\bin\Debug\net7.0\Infrastructure.pdb
 D:\Projects\RamandAPI\RamandAPI\Infrastructure\bin\Debug\net7.0\Application.dll
 D:\Projects\RamandAPI\RamandAPI\Infrastructure\bin\Debug\net7.0\Domain.dll
+D:\Projects\RamandAPI\RamandAPI\Infrastructure\bin\Debug\net7.0\RabbitDI.dll
 D:\Projects\RamandAPI\RamandAPI\Infrastructure\bin\Debug\net7.0\Application.pdb
 D:\Projects\RamandAPI\RamandAPI\Infrastructure\bin\Debug\net7.0\Domain.pdb
+D:\Projects\RamandAPI\RamandAPI\Infrastructure\bin\Debug\net7.0\RabbitDI.pdb
 D:\Projects\RamandAPI\RamandAPI\Infrastructure\obj\Debug\net7.0\Infrastructure.csproj.AssemblyReference.cache
 D:\Projects\RamandAPI\RamandAPI\Infrastructure\obj\Debug\net7.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 D:\Projects\RamandAPI\RamandAPI\Infrastructure\obj\Debug\net7.0\Infrastructure.AssemblyInfoInputs.cache
@@ -33,5 +35,3 @@ D:\Projects\RamandAPI\RamandAPI\Infrastructure\obj\Debug\net7.0\Infrastructure.d
 D:\Projects\RamandAPI\RamandAPI\Infrastructure\obj\Debug\net7.0\refint\Infrastructure.dll
 D:\Projects\RamandAPI\RamandAPI\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb
 D:\Projects\RamandAPI\RamandAPI\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.dll
-D:\Projects\RamandAPI\RamandAPI\Infrastructure\bin\Debug\net7.0\RabbitDI.dll
-D:\Projects\RamandAPI\RamandAPI\Infrastructure\bin\Debug\net7.0\RabbitDI.pdb
