@@ -6,6 +6,9 @@ using Domain.IRepositories;
 using Infrastructure.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 using RabbitDI.MessagesOperations;
+using Quartz;
+using Quartz.Impl;
+using Quartz.Spi;
 
 
 namespace Infrastructure

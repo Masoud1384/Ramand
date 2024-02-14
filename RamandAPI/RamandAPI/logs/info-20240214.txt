@@ -226,3 +226,184 @@ System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport
 2024-02-14 15:33:09.548 +03:30 [DBG] Server pc-shoushtari:19160:bde7e02d heartbeat successfully sent
 2024-02-14 15:33:10.452 +03:30 [ERR] sup
 2024-02-14 15:33:10.465 +03:30 [DBG] 2 recurring job(s) processed by scheduler.
+2024-02-14 16:03:45.044 +03:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-02-14 16:03:45.152 +03:30 [DBG] Hosting starting
+2024-02-14 16:03:45.175 +03:30 [INF] User profile is available. Using 'C:\Users\m.shoushtari\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-14 16:03:45.182 +03:30 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-02-14 16:03:45.182 +03:30 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-02-14 16:03:45.182 +03:30 [INF] Quartz Scheduler created
+2024-02-14 16:03:45.182 +03:30 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-02-14 16:03:45.182 +03:30 [INF] RAMJobStore initialized.
+2024-02-14 16:03:45.182 +03:30 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-02-14 16:03:45.182 +03:30 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-02-14 16:03:45.182 +03:30 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-02-14 16:03:45.188 +03:30 [INF] Adding 1 jobs, 1 triggers.
+2024-02-14 16:03:45.190 +03:30 [INF] Adding job: JobGroup.MyJob
+2024-02-14 16:03:45.192 +03:30 [DBG] Scheduling job: JobGroup.MyJob with trigger: TriggerGroup.MyTrigger
+2024-02-14 16:03:45.193 +03:30 [DBG] Rescheduling job: JobGroup.MyJob with updated trigger: TriggerGroup.MyTrigger
+2024-02-14 16:03:45.202 +03:30 [DBG] Reading data from file 'C:\Users\m.shoushtari\AppData\Local\ASP.NET\DataProtection-Keys\key-e6c72934-a63f-4d50-bb3f-39b4d6ed0312.xml'.
+2024-02-14 16:03:45.208 +03:30 [DBG] Found key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312}.
+2024-02-14 16:03:45.215 +03:30 [DBG] Considering key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312} with expiration date 2024-05-05 06:33:11Z as default key.
+2024-02-14 16:03:45.217 +03:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-02-14 16:03:45.218 +03:30 [DBG] Decrypting secret element using Windows DPAPI.
+2024-02-14 16:03:45.219 +03:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-02-14 16:03:45.222 +03:30 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-02-14 16:03:45.223 +03:30 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-02-14 16:03:45.224 +03:30 [DBG] Using key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312} as the default key.
+2024-02-14 16:03:45.224 +03:30 [DBG] Key ring with default key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312} was loaded during application startup.
+2024-02-14 16:03:45.334 +03:30 [INF] Now listening on: https://localhost:7028
+2024-02-14 16:03:45.334 +03:30 [INF] Now listening on: http://localhost:5038
+2024-02-14 16:03:45.334 +03:30 [DBG] Loaded hosting startup assembly RamandAPI
+2024-02-14 16:03:45.334 +03:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-02-14 16:03:45.334 +03:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-02-14 16:03:45.334 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-14 16:03:45.334 +03:30 [INF] Hosting environment: Development
+2024-02-14 16:03:45.334 +03:30 [INF] Content root path: D:\Projects\RamandAPI\RamandAPI\RamandAPI
+2024-02-14 16:03:45.334 +03:30 [DBG] Hosting started
+2024-02-14 16:03:45.336 +03:30 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-02-14 16:03:45.336 +03:30 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-02-14 16:03:45.336 +03:30 [DBG] Batch acquisition of 1 triggers
+2024-02-14 16:03:45.358 +03:30 [DBG] Connection id "0HN1DB4NPFEMC" accepted.
+2024-02-14 16:03:45.358 +03:30 [DBG] Connection id "0HN1DB4NPFEMB" accepted.
+2024-02-14 16:03:45.358 +03:30 [DBG] Connection id "0HN1DB4NPFEMB" started.
+2024-02-14 16:03:45.358 +03:30 [DBG] Connection id "0HN1DB4NPFEMC" started.
+2024-02-14 16:03:45.379 +03:30 [DBG] Connection id "0HN1DB4NPFEMB" received FIN.
+2024-02-14 16:03:45.379 +03:30 [DBG] Connection id "0HN1DB4NPFEMC" received FIN.
+2024-02-14 16:03:45.390 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-02-14 16:03:45.390 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-02-14 16:03:45.416 +03:30 [DBG] Connection id "0HN1DB4NPFEMB" stopped.
+2024-02-14 16:03:45.416 +03:30 [DBG] Connection id "0HN1DB4NPFEMC" stopped.
+2024-02-14 16:03:45.418 +03:30 [DBG] Connection id "0HN1DB4NPFEMB" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-02-14 16:03:45.418 +03:30 [DBG] Connection id "0HN1DB4NPFEMC" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-02-14 16:03:45.557 +03:30 [DBG] Connection id "0HN1DB4NPFEMD" accepted.
+2024-02-14 16:03:45.557 +03:30 [DBG] Connection id "0HN1DB4NPFEMD" started.
+2024-02-14 16:03:45.591 +03:30 [DBG] Connection 0HN1DB4NPFEMD established using the following protocol: "Tls12"
+2024-02-14 16:03:45.635 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2024-02-14 16:03:45.729 +03:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-02-14 16:03:45.751 +03:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-02-14 16:03:45.751 +03:30 [DBG] Request did not match any endpoints
+2024-02-14 16:03:45.864 +03:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-02-14 16:03:45.881 +03:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-02-14 16:03:45.884 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 250.1695ms
+2024-02-14 16:03:45.892 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2024-02-14 16:03:45.892 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2024-02-14 16:03:45.897 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 4.9335ms
+2024-02-14 16:03:45.924 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 32.8935ms
+2024-02-14 16:03:45.965 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2024-02-14 16:03:45.965 +03:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-02-14 16:03:45.965 +03:30 [DBG] Request did not match any endpoints
+2024-02-14 16:03:46.072 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 106.5918ms
+2024-02-14 16:04:23.904 +03:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-02-14 16:04:24.020 +03:30 [DBG] Hosting starting
+2024-02-14 16:04:24.049 +03:30 [INF] User profile is available. Using 'C:\Users\m.shoushtari\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-14 16:04:24.056 +03:30 [DBG] TaskSchedulingThreadPool configured with max concurrency of 10 and TaskScheduler ThreadPoolTaskScheduler.
+2024-02-14 16:04:24.056 +03:30 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2024-02-14 16:04:24.056 +03:30 [INF] Quartz Scheduler created
+2024-02-14 16:04:24.056 +03:30 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2024-02-14 16:04:24.056 +03:30 [INF] RAMJobStore initialized.
+2024-02-14 16:04:24.056 +03:30 [INF] Quartz Scheduler 3.8.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2024-02-14 16:04:24.057 +03:30 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2024-02-14 16:04:24.057 +03:30 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2024-02-14 16:04:24.064 +03:30 [INF] Adding 1 jobs, 1 triggers.
+2024-02-14 16:04:24.067 +03:30 [INF] Adding job: JobGroup.DailyJob
+2024-02-14 16:04:24.068 +03:30 [DBG] Scheduling job: JobGroup.DailyJob with trigger: TriggerGroup.MyTrigger
+2024-02-14 16:04:24.070 +03:30 [DBG] Rescheduling job: JobGroup.DailyJob with updated trigger: TriggerGroup.MyTrigger
+2024-02-14 16:04:24.079 +03:30 [DBG] Reading data from file 'C:\Users\m.shoushtari\AppData\Local\ASP.NET\DataProtection-Keys\key-e6c72934-a63f-4d50-bb3f-39b4d6ed0312.xml'.
+2024-02-14 16:04:24.084 +03:30 [DBG] Found key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312}.
+2024-02-14 16:04:24.094 +03:30 [DBG] Considering key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312} with expiration date 2024-05-05 06:33:11Z as default key.
+2024-02-14 16:04:24.097 +03:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-02-14 16:04:24.099 +03:30 [DBG] Decrypting secret element using Windows DPAPI.
+2024-02-14 16:04:24.100 +03:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-02-14 16:04:24.103 +03:30 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-02-14 16:04:24.104 +03:30 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-02-14 16:04:24.105 +03:30 [DBG] Using key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312} as the default key.
+2024-02-14 16:04:24.106 +03:30 [DBG] Key ring with default key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312} was loaded during application startup.
+2024-02-14 16:04:24.227 +03:30 [INF] Now listening on: https://localhost:7028
+2024-02-14 16:04:24.227 +03:30 [INF] Now listening on: http://localhost:5038
+2024-02-14 16:04:24.227 +03:30 [DBG] Loaded hosting startup assembly RamandAPI
+2024-02-14 16:04:24.227 +03:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-02-14 16:04:24.227 +03:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-02-14 16:04:24.227 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-14 16:04:24.228 +03:30 [INF] Hosting environment: Development
+2024-02-14 16:04:24.228 +03:30 [INF] Content root path: D:\Projects\RamandAPI\RamandAPI\RamandAPI
+2024-02-14 16:04:24.228 +03:30 [DBG] Hosting started
+2024-02-14 16:04:24.228 +03:30 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-02-14 16:04:24.228 +03:30 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2024-02-14 16:04:24.229 +03:30 [DBG] Batch acquisition of 0 triggers
+2024-02-14 16:04:24.368 +03:30 [DBG] Connection id "0HN1DB53DGG4B" accepted.
+2024-02-14 16:04:24.368 +03:30 [DBG] Connection id "0HN1DB53DGG4C" accepted.
+2024-02-14 16:04:24.369 +03:30 [DBG] Connection id "0HN1DB53DGG4B" started.
+2024-02-14 16:04:24.369 +03:30 [DBG] Connection id "0HN1DB53DGG4C" started.
+2024-02-14 16:04:24.419 +03:30 [DBG] Connection id "0HN1DB53DGG4C" received FIN.
+2024-02-14 16:04:24.419 +03:30 [DBG] Connection id "0HN1DB53DGG4B" received FIN.
+2024-02-14 16:04:24.463 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-02-14 16:04:24.463 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-02-14 16:04:24.490 +03:30 [DBG] Connection id "0HN1DB53DGG4B" stopped.
+2024-02-14 16:04:24.490 +03:30 [DBG] Connection id "0HN1DB53DGG4C" stopped.
+2024-02-14 16:04:24.492 +03:30 [DBG] Connection id "0HN1DB53DGG4C" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-02-14 16:04:24.493 +03:30 [DBG] Connection id "0HN1DB53DGG4B" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-02-14 16:04:24.511 +03:30 [DBG] Connection id "0HN1DB53DGG4D" accepted.
+2024-02-14 16:04:24.511 +03:30 [DBG] Connection id "0HN1DB53DGG4D" started.
+2024-02-14 16:04:24.540 +03:30 [DBG] Connection 0HN1DB53DGG4D established using the following protocol: "Tls12"
+2024-02-14 16:04:24.584 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2024-02-14 16:04:24.671 +03:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-02-14 16:04:24.694 +03:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-02-14 16:04:24.695 +03:30 [DBG] Request did not match any endpoints
+2024-02-14 16:04:24.805 +03:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-02-14 16:04:24.821 +03:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-02-14 16:04:24.824 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 240.5270ms
+2024-02-14 16:04:24.832 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2024-02-14 16:04:24.832 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2024-02-14 16:04:24.836 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 4.3090ms
+2024-02-14 16:04:24.866 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 33.9299ms
+2024-02-14 16:04:24.905 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2024-02-14 16:04:24.905 +03:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-02-14 16:04:24.905 +03:30 [DBG] Request did not match any endpoints
+2024-02-14 16:04:24.988 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 83.3594ms
+2024-02-14 16:04:49.500 +03:30 [DBG] Batch acquisition of 1 triggers
+2024-02-14 16:05:00.017 +03:30 [DBG] Batch acquisition of 0 triggers
+2024-02-14 16:05:00.019 +03:30 [DBG] Calling Execute on job JobGroup.DailyJob
+2024-02-14 16:05:00.019 +03:30 [DBG] Calling Execute on job JobGroup.DailyJob
+2024-02-14 16:05:00.020 +03:30 [ERR] sup from quartz
+2024-02-14 16:05:00.020 +03:30 [ERR] sup from quartz
+2024-02-14 16:05:00.023 +03:30 [DBG] Trigger instruction : NoInstruction
+2024-02-14 16:05:00.023 +03:30 [DBG] Trigger instruction : NoInstruction
+2024-02-14 16:05:26.357 +03:30 [DBG] Batch acquisition of 0 triggers
+2024-02-14 16:05:56.347 +03:30 [DBG] Batch acquisition of 1 triggers
+2024-02-14 16:06:00.000 +03:30 [DBG] Batch acquisition of 0 triggers
+2024-02-14 16:06:00.000 +03:30 [DBG] Calling Execute on job JobGroup.DailyJob
+2024-02-14 16:06:00.000 +03:30 [DBG] Calling Execute on job JobGroup.DailyJob
+2024-02-14 16:06:00.000 +03:30 [ERR] sup from quartz
+2024-02-14 16:06:00.000 +03:30 [ERR] sup from quartz
+2024-02-14 16:06:00.001 +03:30 [DBG] Trigger instruction : NoInstruction
+2024-02-14 16:06:00.001 +03:30 [DBG] Trigger instruction : NoInstruction
+2024-02-14 16:06:25.133 +03:30 [DBG] Batch acquisition of 0 triggers
+2024-02-14 16:06:54.078 +03:30 [DBG] Batch acquisition of 1 triggers
+2024-02-14 16:07:00.003 +03:30 [DBG] Batch acquisition of 0 triggers
+2024-02-14 16:07:00.003 +03:30 [DBG] Calling Execute on job JobGroup.DailyJob
+2024-02-14 16:07:00.003 +03:30 [DBG] Calling Execute on job JobGroup.DailyJob
+2024-02-14 16:07:00.003 +03:30 [ERR] sup from quartz
+2024-02-14 16:07:00.003 +03:30 [ERR] sup from quartz
+2024-02-14 16:07:00.011 +03:30 [DBG] Trigger instruction : NoInstruction
+2024-02-14 16:07:00.011 +03:30 [DBG] Trigger instruction : NoInstruction
+2024-02-14 16:07:25.018 +03:30 [DBG] Batch acquisition of 0 triggers

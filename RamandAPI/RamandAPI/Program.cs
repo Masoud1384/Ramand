@@ -8,17 +8,42 @@ using Serilog;
 using Serilog.Events;
 using Serilog.Formatting.Json;
 using RamandAPI;
-using Hangfire;
+using Quartz;
+using RamandAPI.QuartzOperations;
+using Quartz.Impl;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
-builder.Services.AddHangfire(configuration => configuration
-        .UseSqlServerStorage("Server=.;Database=Hangfire;User Id=sa;Password=@Admin22;Encrypt=False;"));
+builder.Services.AddQuartz(q =>
+{
+    var jobKey = new JobKey("DailyJob", "JobGroup");
+    q.AddJob<DailyJob>(opts => opts.WithIdentity(jobKey));
+    q.AddTrigger(opts => opts
+        .ForJob(jobKey)
+        .WithIdentity("MyTrigger", "TriggerGroup")
+        .WithCronSchedule("0 0/37 15-22 ? * * *"));
+});
+
+builder.Services.AddQuartzHostedService(
+    q => q.WaitForJobsToComplete = true);
+ISchedulerFactory schedFact = new StdSchedulerFactory();
+IScheduler sched = schedFact.GetScheduler().Result;
+sched.Start();
+IJobDetail job = JobBuilder.Create<DailyJob>()
+    .WithIdentity(name: "DailyJob", group: "JobGroup")
+    .Build();
+ITrigger trigger = TriggerBuilder.Create()
+    .WithIdentity(name: "MyTrigger", group: "TriggerGroup")
+    .WithCronSchedule("0 0/37 15-22 ? * * *")
+    .Build();
+sched.ScheduleJob(job, trigger);
+
+
+builder.Services.AddQuartzHostedService(q => q.WaitForJobsToComplete = true);
 builder.Services.AddSwaggerGen();
 builder.Services.AddAuthentication(option =>
 {
@@ -68,12 +93,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseHangfireDashboard();
-app.UseHangfireServer();
-
-RecurringJob.AddOrUpdate(() => RabbitSender.CallApi(), Cron.Minutely);
-RecurringJob.AddOrUpdate(() => Log.Error("sup"),Cron.Minutely);
-
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

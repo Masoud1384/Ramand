@@ -205,6 +205,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "Quartz": {
+              "target": "Package",
+              "version": "[3.8.0, )"
+            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[7.0.0, )"
@@ -351,10 +355,6 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "Hangfire": {
-              "target": "Package",
-              "version": "[1.8.10, )"
-            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[7.0.15, )"
@@ -366,6 +366,18 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.15, )"
+            },
+            "Quartz": {
+              "target": "Package",
+              "version": "[3.8.0, )"
+            },
+            "Quartz.AspNetCore": {
+              "target": "Package",
+              "version": "[3.8.0, )"
+            },
+            "Quartz.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.8.0, )"
             },
             "RabbitMQ.Client": {
               "target": "Package",
