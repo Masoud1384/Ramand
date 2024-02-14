@@ -18,7 +18,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddHangfire(configuration => configuration
-        .UseSqlServerStorage("Server=.;Database=Ramand;User Id=sa;Password=@Admin22;Encrypt=False;"));
+        .UseSqlServerStorage("Server=.;Database=Hangfire;User Id=sa;Password=@Admin22;Encrypt=False;"));
 builder.Services.AddSwaggerGen();
 builder.Services.AddAuthentication(option =>
 {

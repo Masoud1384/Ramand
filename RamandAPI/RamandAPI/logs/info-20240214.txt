@@ -109,3 +109,120 @@ System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport
 2024-02-14 15:06:09.997 +03:30 [DBG] 2 recurring job(s) processed by scheduler.
 2024-02-14 15:06:10.015 +03:30 [ERR] sup
 2024-02-14 15:06:24.312 +03:30 [DBG] Server pc-shoushtari:16044:7b766b7e heartbeat successfully sent
+2024-02-14 15:31:08.777 +03:30 [INF] Start installing Hangfire SQL objects...
+2024-02-14 15:31:09.222 +03:30 [INF] Hangfire SQL objects installed.
+2024-02-14 15:31:09.263 +03:30 [INF] Starting Hangfire Server using job storage: 'SQL Server: .@Hangfire'
+2024-02-14 15:31:09.263 +03:30 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2024-02-14 15:31:09.263 +03:30 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2024-02-14 15:31:09.277 +03:30 [DBG] Execution loop BackgroundServerProcess:98ed11ec has started in 4.9752 ms
+2024-02-14 15:31:09.402 +03:30 [INF] Server pc-shoushtari:19160:bde7e02d successfully announced in 122.3328 ms
+2024-02-14 15:31:09.406 +03:30 [DBG] Execution loop ServerHeartbeatProcess:678639c4 has started in 3.4457 ms
+2024-02-14 15:31:09.406 +03:30 [INF] Server pc-shoushtari:19160:bde7e02d is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2024-02-14 15:31:09.409 +03:30 [DBG] Execution loop ServerWatchdog:67b8d5fb has started in 2.8227 ms
+2024-02-14 15:31:09.412 +03:30 [DBG] Execution loop ServerJobCancellationWatcher:3be7479d has started in 4.8616 ms
+2024-02-14 15:31:09.415 +03:30 [DBG] Execution loop ExpirationManager:3cb2331c has started in 3.7049 ms
+2024-02-14 15:31:09.417 +03:30 [DBG] Execution loop CountersAggregator:098c2ab1 has started in 5.0526 ms
+2024-02-14 15:31:09.420 +03:30 [DBG] Execution loop SqlServerHeartbeatProcess:bea62a47 has started in 4.424 ms
+2024-02-14 15:31:09.420 +03:30 [DBG] Aggregating records in 'Counter' table...
+2024-02-14 15:31:09.420 +03:30 [DBG] Removing outdated records from the 'AggregatedCounter' table...
+2024-02-14 15:31:09.454 +03:30 [DBG] Execution loop Worker:99d34951 has started in 36.7817 ms
+2024-02-14 15:31:09.454 +03:30 [DBG] Execution loop Worker:22d83f37 has started in 36.7775 ms
+2024-02-14 15:31:09.457 +03:30 [DBG] Execution loop Worker:b2bc31ae has started in 39.6289 ms
+2024-02-14 15:31:09.461 +03:30 [DBG] Execution loop Worker:16351b9e has started in 43.2903 ms
+2024-02-14 15:31:09.463 +03:30 [DBG] Execution loop Worker:18aba420 has started in 45.854 ms
+2024-02-14 15:31:09.505 +03:30 [DBG] Execution loop Worker:2cb0f0b6 has started in 87.4338 ms
+2024-02-14 15:31:09.522 +03:30 [DBG] Execution loop Worker:c4c8e8c7 has started in 104.365 ms
+2024-02-14 15:31:09.526 +03:30 [DBG] Execution loop Worker:739bf3fc has started in 108.4076 ms
+2024-02-14 15:31:09.528 +03:30 [DBG] Execution loop Worker:46546404 has started in 110.7576 ms
+2024-02-14 15:31:09.532 +03:30 [DBG] Execution loop Worker:d62924c3 has started in 114.5378 ms
+2024-02-14 15:31:09.539 +03:30 [DBG] Execution loop Worker:4a54e0a2 has started in 121.7762 ms
+2024-02-14 15:31:09.541 +03:30 [DBG] Execution loop Worker:e17f7710 has started in 123.6132 ms
+2024-02-14 15:31:09.545 +03:30 [DBG] Execution loop Worker:391d145e has started in 126.7095 ms
+2024-02-14 15:31:09.548 +03:30 [DBG] Execution loop Worker:c2000798 has started in 130.4231 ms
+2024-02-14 15:31:09.550 +03:30 [DBG] Execution loop Worker:8f65b63e has started in 132.7487 ms
+2024-02-14 15:31:09.553 +03:30 [DBG] Execution loop Worker:dba981bf has started in 135.6091 ms
+2024-02-14 15:31:09.556 +03:30 [DBG] Execution loop Worker:cc4da3a1 has started in 139.0126 ms
+2024-02-14 15:31:09.565 +03:30 [DBG] Execution loop Worker:9ad32547 has started in 147.0444 ms
+2024-02-14 15:31:09.567 +03:30 [DBG] Execution loop Worker:708395f1 has started in 149.3318 ms
+2024-02-14 15:31:09.567 +03:30 [DBG] Removing outdated records from the 'Job' table...
+2024-02-14 15:31:09.570 +03:30 [DBG] Execution loop Worker:626014f9 has started in 152.6603 ms
+2024-02-14 15:31:09.573 +03:30 [DBG] Execution loop DelayedJobScheduler:1e265893 has started in 6.4105 ms
+2024-02-14 15:31:09.573 +03:30 [INF] Server pc-shoushtari:19160:bde7e02d all the dispatchers started
+2024-02-14 15:31:09.576 +03:30 [DBG] Execution loop RecurringJobScheduler:1488f2c5 has started in 6.4071 ms
+2024-02-14 15:31:09.685 +03:30 [DBG] Removing outdated records from the 'List' table...
+2024-02-14 15:31:09.754 +03:30 [DBG] Removing outdated records from the 'Set' table...
+2024-02-14 15:31:09.786 +03:30 [DBG] Removing outdated records from the 'Hash' table...
+2024-02-14 15:31:09.927 +03:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-02-14 15:31:09.996 +03:30 [DBG] Hosting starting
+2024-02-14 15:31:10.007 +03:30 [INF] User profile is available. Using 'C:\Users\m.shoushtari\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-14 15:31:10.010 +03:30 [DBG] Reading data from file 'C:\Users\m.shoushtari\AppData\Local\ASP.NET\DataProtection-Keys\key-e6c72934-a63f-4d50-bb3f-39b4d6ed0312.xml'.
+2024-02-14 15:31:10.017 +03:30 [DBG] Found key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312}.
+2024-02-14 15:31:10.024 +03:30 [DBG] Considering key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312} with expiration date 2024-05-05 06:33:11Z as default key.
+2024-02-14 15:31:10.027 +03:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-02-14 15:31:10.028 +03:30 [DBG] Decrypting secret element using Windows DPAPI.
+2024-02-14 15:31:10.030 +03:30 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-02-14 15:31:10.032 +03:30 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-02-14 15:31:10.033 +03:30 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-02-14 15:31:10.034 +03:30 [DBG] Using key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312} as the default key.
+2024-02-14 15:31:10.034 +03:30 [DBG] Key ring with default key {e6c72934-a63f-4d50-bb3f-39b4d6ed0312} was loaded during application startup.
+2024-02-14 15:31:10.135 +03:30 [INF] Now listening on: https://localhost:7028
+2024-02-14 15:31:10.136 +03:30 [INF] Now listening on: http://localhost:5038
+2024-02-14 15:31:10.136 +03:30 [DBG] Loaded hosting startup assembly RamandAPI
+2024-02-14 15:31:10.136 +03:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-02-14 15:31:10.136 +03:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-02-14 15:31:10.136 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-14 15:31:10.136 +03:30 [INF] Hosting environment: Development
+2024-02-14 15:31:10.136 +03:30 [INF] Content root path: D:\Projects\RamandAPI\RamandAPI\RamandAPI
+2024-02-14 15:31:10.136 +03:30 [DBG] Hosting started
+2024-02-14 15:31:10.631 +03:30 [DBG] Connection id "0HN1DAIH7O3OK" accepted.
+2024-02-14 15:31:10.631 +03:30 [DBG] Connection id "0HN1DAIH7O3OJ" accepted.
+2024-02-14 15:31:10.632 +03:30 [DBG] Connection id "0HN1DAIH7O3OJ" started.
+2024-02-14 15:31:10.632 +03:30 [DBG] Connection id "0HN1DAIH7O3OK" started.
+2024-02-14 15:31:10.647 +03:30 [DBG] Connection id "0HN1DAIH7O3OJ" received FIN.
+2024-02-14 15:31:10.647 +03:30 [DBG] Connection id "0HN1DAIH7O3OK" received FIN.
+2024-02-14 15:31:10.671 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-02-14 15:31:10.671 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-02-14 15:31:10.697 +03:30 [DBG] Connection id "0HN1DAIH7O3OJ" stopped.
+2024-02-14 15:31:10.697 +03:30 [DBG] Connection id "0HN1DAIH7O3OK" stopped.
+2024-02-14 15:31:10.698 +03:30 [DBG] Connection id "0HN1DAIH7O3OK" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-02-14 15:31:10.698 +03:30 [DBG] Connection id "0HN1DAIH7O3OJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-02-14 15:31:20.894 +03:30 [DBG] Connection id "0HN1DAIH7O3OL" accepted.
+2024-02-14 15:31:20.895 +03:30 [DBG] Connection id "0HN1DAIH7O3OL" started.
+2024-02-14 15:31:20.931 +03:30 [DBG] Connection 0HN1DAIH7O3OL established using the following protocol: "Tls12"
+2024-02-14 15:31:20.988 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/index.html - -
+2024-02-14 15:31:21.106 +03:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-02-14 15:31:21.128 +03:30 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-02-14 15:31:21.128 +03:30 [DBG] Request did not match any endpoints
+2024-02-14 15:31:21.233 +03:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-02-14 15:31:21.248 +03:30 [DBG] Response markup was updated to include browser refresh script injection.
+2024-02-14 15:31:21.251 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/index.html - - - 200 - text/html;charset=utf-8 264.7902ms
+2024-02-14 15:31:21.258 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - -
+2024-02-14 15:31:21.258 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/_vs/browserLink - -
+2024-02-14 15:31:21.263 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/_framework/aspnetcore-browser-refresh.js - - - 200 12350 application/javascript;+charset=utf-8 4.7782ms
+2024-02-14 15:31:21.298 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 39.5343ms
+2024-02-14 15:31:21.334 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - -
+2024-02-14 15:31:21.335 +03:30 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-02-14 15:31:21.335 +03:30 [DBG] Request did not match any endpoints
+2024-02-14 15:31:21.416 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7028/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 81.1167ms
+2024-02-14 15:31:39.472 +03:30 [DBG] Server pc-shoushtari:19160:bde7e02d heartbeat successfully sent
+2024-02-14 15:32:09.498 +03:30 [DBG] Server pc-shoushtari:19160:bde7e02d heartbeat successfully sent
+2024-02-14 15:32:10.190 +03:30 [DBG] 2 recurring job(s) processed by scheduler.
+2024-02-14 15:32:10.308 +03:30 [ERR] sup
+2024-02-14 15:32:39.523 +03:30 [DBG] Server pc-shoushtari:19160:bde7e02d heartbeat successfully sent
+2024-02-14 15:33:09.548 +03:30 [DBG] Server pc-shoushtari:19160:bde7e02d heartbeat successfully sent
+2024-02-14 15:33:10.452 +03:30 [ERR] sup
+2024-02-14 15:33:10.465 +03:30 [DBG] 2 recurring job(s) processed by scheduler.

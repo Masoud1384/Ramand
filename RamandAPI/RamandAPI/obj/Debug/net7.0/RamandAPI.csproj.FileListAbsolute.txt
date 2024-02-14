@@ -156,3 +156,4 @@ D:\Projects\RamandAPI\RamandAPI\RamandAPI\bin\Debug\net7.0\sv\Hangfire.Core.reso
 D:\Projects\RamandAPI\RamandAPI\RamandAPI\bin\Debug\net7.0\tr-TR\Hangfire.Core.resources.dll
 D:\Projects\RamandAPI\RamandAPI\RamandAPI\bin\Debug\net7.0\zh-TW\Hangfire.Core.resources.dll
 D:\Projects\RamandAPI\RamandAPI\RamandAPI\bin\Debug\net7.0\zh\Hangfire.Core.resources.dll
+D:\Projects\RamandAPI\RamandAPI\RamandAPI\bin\Debug\net7.0\logs\error-.json
