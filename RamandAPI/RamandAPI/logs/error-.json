@@ -1,2 +1,644 @@
-{"Timestamp":"2024-02-17T10:31:57.8880291+03:30","Level":"Error","MessageTemplate":"The DELETE statement conflicted with the REFERENCE constraint \"FK__UserToken__Id__05D8E0BE\". The conflict occurred in database \"Ramand\", table \"dbo.UserToken\", column 'Id'.\r\nThe statement has been terminated.","TraceId":"fc711ffa5d9c78ff6296fd856a77371d","SpanId":"c0f9b753fc0ef020"}
-{"Timestamp":"2024-02-17T11:22:00.0234914+03:30","Level":"Error","MessageTemplate":"sup from quartz 224567822"}
+{
+  [
+    {
+      "Timestamp": "2024-02-17T11:44:31.0077181+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T11:45:00.0137121+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T11:46:00.0065242+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T11:47:00.0081142+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T11:48:00.0138964+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T11:49:00.0052745+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T11:50:00.0011769+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T11:51:00.0089955+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T11:52:00.0095137+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T11:53:00.0031769+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T11:54:00.0007903+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T11:55:00.0097094+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T11:56:00.0107443+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T11:57:00.0022827+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T11:58:00.0095058+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T11:59:00.0030019+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:00:00.0091352+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:01:00.0135349+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:02:00.0055711+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:03:00.0135805+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:04:00.0090521+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:05:00.0009470+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:06:00.0144240+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:07:00.0062259+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:08:00.0064243+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:09:00.0096288+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:10:00.0017726+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:11:00.0050164+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:12:00.0009868+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:13:00.0066621+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:14:00.0135510+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:15:00.0068003+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:16:00.0038536+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:17:00.0162904+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:18:00.0102295+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:19:00.0124189+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:20:00.0064402+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:21:00.0114769+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:22:00.0135516+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:23:00.0050508+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:24:00.0052925+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:25:00.0132283+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:26:00.0072482+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:27:00.0107659+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:28:00.0096497+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:29:00.0114624+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:30:00.0132722+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:31:00.0055366+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:32:00.0039913+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T12:58:07.6605042+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T14:14:00.0300833+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T14:15:00.0125161+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T14:17:00.0234401+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T14:18:00.0154359+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T14:19:00.0006869+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T14:20:00.0157160+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T14:21:00.0090652+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T14:22:00.0013840+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T14:32:00.0180534+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T14:33:00.0262500+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:24:00.0185012+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:25:00.0065788+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:26:00.0025874+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:27:02.5304588+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:28:00.0124558+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:29:00.0139178+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:30:00.0179427+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:31:00.0018561+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:32:00.0040958+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:33:00.0052879+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:34:00.0125605+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:35:00.0054058+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:36:00.0066955+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:37:00.0157603+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:37:00.0173801+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:38:00.0092345+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:39:00.0090774+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:40:00.0125654+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:41:00.0138103+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:42:00.0155513+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:43:00.0118049+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:44:00.0082013+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:45:00.0097536+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:46:00.0056604+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:47:00.0115401+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:48:00.0047368+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:49:00.0085269+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:50:00.0093187+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:51:00.0062905+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:52:00.0019309+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:53:00.0059244+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:54:00.0033679+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:55:00.0143355+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:56:00.0009010+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:57:00.0142928+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:58:00.0121041+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T15:59:00.0028886+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:00:00.0109795+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:00:00.0112507+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:01:00.0151792+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:02:00.0086447+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:03:00.0105893+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:04:00.0125629+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:05:00.0021741+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:06:00.0146208+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:07:00.0078344+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:08:00.0056527+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:09:00.0020062+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:10:00.0090982+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:11:00.0006982+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:12:00.0081216+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:13:00.0145388+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:14:00.0003027+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:19:00.0257217+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:20:00.0157616+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:21:00.0037912+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:22:00.0036699+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:23:00.0115487+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:24:00.0026275+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:25:00.0083673+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:26:00.0065783+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:27:00.0105836+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:28:00.0081441+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:29:00.0130636+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:30:00.0076294+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:31:00.0083204+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:32:00.0156533+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    },
+    {
+      "Timestamp": "2024-02-17T16:33:00.0054024+03:30",
+      "Level": "Error",
+      "MessageTemplate": "sup from quartz 4"
+    }
+  ]
+}

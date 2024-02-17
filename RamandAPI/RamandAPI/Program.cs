@@ -59,7 +59,7 @@ builder.Services.AddAuthentication(option =>
       ValidateIssuerSigningKey = true,
       ValidIssuer = builder.Configuration["JWT:issuer"],
       ValidAudience = builder.Configuration["JWT:audience"],
-      IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:key"]))
+      IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(builder.Configuration["Jwt:key"]))    
   });
 
 Log.Logger = new LoggerConfiguration()
