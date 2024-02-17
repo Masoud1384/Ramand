@@ -118,6 +118,5 @@ namespace RamandAPI.V2
             channel.BasicPublish("MExchange", "M-routing-key", null, messageBody);
           
         }
-   
     }
 }

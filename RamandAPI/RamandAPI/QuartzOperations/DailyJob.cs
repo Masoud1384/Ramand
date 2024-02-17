@@ -7,7 +7,7 @@ namespace RamandAPI.QuartzOperations
     {
         public async Task Execute(IJobExecutionContext context)
         {
-            Log.Error("sup from quartz 2222");
+            Log.Error("sup from quartz 4");
         }
     }
 }

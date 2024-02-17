@@ -8,7 +8,6 @@ using Newtonsoft.Json;
 
 namespace Infrastructure.Repositories
 {
-
     public class EmployeeRepository : IEmployeeRepository
     {
         private readonly string _connectionString = "Server=.;Database=Ramand;User Id=sa;Password=@Admin22;Encrypt=False;";
@@ -49,7 +48,7 @@ namespace Infrastructure.Repositories
             {
                 Log.Error(ex.Message);
             }
-            return null;
+            return new List<Employee>();
         }
 
         public bool Upsert(Employee employee)

@@ -68,7 +68,7 @@ namespace RamandAPI.V1
                 {
                     new HATEOSDto
                     {
-                        hrref = Url.Action(nameof(V1.UserController.Delete),"User",new {username = user.Username},Request.Scheme),
+                        hrref = Url.Action(nameof(Delete),"User",new {username = user.Username},Request.Scheme),
                         Method = "DELETE"
                     }
                 };

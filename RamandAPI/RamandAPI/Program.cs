@@ -38,7 +38,7 @@ IJobDetail job = JobBuilder.Create<DailyJob>()
     .Build();
 ITrigger trigger = TriggerBuilder.Create()
     .WithIdentity(name: "MyTrigger", group: "TriggerGroup")
-    .WithCronSchedule("0 0/37 15-22 ? * * *")
+    .WithCronSchedule("0 0/1 11-22 ? * * *")
     .Build();
 sched.ScheduleJob(job, trigger);
 
@@ -62,7 +62,6 @@ builder.Services.AddAuthentication(option =>
       IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:key"]))
   });
 
-var errorLogFilePath = "logs/errors-.txt";
 Log.Logger = new LoggerConfiguration()
                             .WriteTo.Console()
                             .WriteTo.File(new JsonFormatter(),
