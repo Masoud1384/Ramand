@@ -3,6 +3,7 @@ using Application.UserOperations.Commands;
 using Application.UserOperations.IRepositoryApplication;
 using Domain.IRepositories;
 using Domain.Models;
+using Mapster;
 using Serilog;
 
 namespace Application.UserOperations.RepositoryApplication
@@ -20,13 +21,13 @@ namespace Application.UserOperations.RepositoryApplication
         {
             try
             {
-                if (!(string.IsNullOrWhiteSpace(createUserCommand.username) && string.IsNullOrWhiteSpace(createUserCommand.password)))
+                if (!(string.IsNullOrWhiteSpace(createUserCommand.Username) && string.IsNullOrWhiteSpace(createUserCommand.Password)))
                 {
-                    var user = new User(createUserCommand.username, createUserCommand.password, new Token());
+                    var user = new User(createUserCommand.Username, createUserCommand.Password, new Token());
                     var result = _userRepository.Create(user);
                     if (result > 0)
                     {
-                        var uservmdata = _userRepository.GetUserBy(createUserCommand.username);
+                        var uservmdata = _userRepository.GetUserBy(createUserCommand.Username);
                         return new UserVM(uservmdata.Id, uservmdata.Password, uservmdata.Username);
                     }
                 }
@@ -99,8 +100,8 @@ namespace Application.UserOperations.RepositoryApplication
                 var user = _userRepository.GetUserBy(username);
                 if (user != null)
                 {
-                    var token = new TokenCommand(user.Id, user.Token.JwtToken, user.Token.Expire, user.Token.RefreshToken, user.Token.RefreshTokenExp);
-
+                    var token = new TokenCommand();
+                    token.Adapt(user);
                     return new UserVM(user.Id, user.Username, user.Password, token);
                 }
             }
@@ -113,7 +114,7 @@ namespace Application.UserOperations.RepositoryApplication
 
         public int InsertUsers(List<CreateUserCommand> users)
         {
-            List<User> userList = users.Select(u => new User(u.username,u.password)).ToList();
+           var userList = users.Adapt<List<User>>();
 
             if (userList.Count > 0)
             {
@@ -138,7 +139,7 @@ namespace Application.UserOperations.RepositoryApplication
             {
                 if (updateUserCommand.userId > 0)
                 {
-                    var user = new User(updateUserCommand.userId, updateUserCommand.username, updateUserCommand.password);
+                    var user = new User(updateUserCommand.userId, updateUserCommand.Username, updateUserCommand.Password);
                     return _userRepository.Update(user) != 0;
                 }
             }

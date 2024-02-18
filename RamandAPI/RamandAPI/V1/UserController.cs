@@ -86,7 +86,7 @@ namespace RamandAPI.V1
         [HttpPost("SignUp")]
         public IActionResult SignUp([FromBody] CreateUserCommand createUserCommand)
         {
-            var isExists = _userRepository.IsUsernameExist(createUserCommand.username);
+            var isExists = _userRepository.IsUsernameExist(createUserCommand.Username);
             if (!isExists)
             {
                 var uservm = _userRepository.Create(createUserCommand);

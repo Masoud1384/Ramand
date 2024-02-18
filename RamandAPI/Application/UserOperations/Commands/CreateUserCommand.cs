@@ -5,8 +5,8 @@ namespace Application.UserOperations.Commands
 {
     public class CreateUserCommand
     {
-        public string username { get; set; }
-        public string password { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
         [JsonIgnore]
         public TokenCommand? Token { get; set; }
 
@@ -16,8 +16,8 @@ namespace Application.UserOperations.Commands
         }
         public CreateUserCommand(string username,string password)
         {
-            this.username = username;
-            this.password = password;
+            this.Username = username;
+            this.Password = password;
         }
     }
 }

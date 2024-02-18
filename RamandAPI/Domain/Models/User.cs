@@ -40,8 +40,5 @@ namespace Domain.Models
             this.Password = password;
         }
 
-        // In real world projects we must store the hashed passwrod
-        // but in order to avoid complexity we just store the password itself here.
-
     }
 }
