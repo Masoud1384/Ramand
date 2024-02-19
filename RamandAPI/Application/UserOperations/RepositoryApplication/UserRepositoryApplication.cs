@@ -114,7 +114,7 @@ namespace Application.UserOperations.RepositoryApplication
 
         public int InsertUsers(List<CreateUserCommand> users)
         {
-           var userList = users.Adapt<List<User>>();
+            var userList = users.Adapt<List<User>>();
 
             if (userList.Count > 0)
             {
@@ -137,10 +137,11 @@ namespace Application.UserOperations.RepositoryApplication
         {
             try
             {
-                if (updateUserCommand.userId > 0)
+                var user = _userRepository.GetUserBy(updateUserCommand.Username);
+                if (user.Id > 0)
                 {
-                    var user = new User(updateUserCommand.userId, updateUserCommand.Username, updateUserCommand.Password);
-                    return _userRepository.Update(user) != 0;
+                    var updateUser = new User(user.Id,updateUserCommand.newUsername,updateUserCommand.newPassword);
+                    return _userRepository.Update(updateUser) != 0;
                 }
             }
             catch (Exception ex)

@@ -179,7 +179,7 @@ namespace RamandAPI.V1
             _tokenRepository.SaveToken(userVm.Id, tokenvm);
             return tokenvm;
         }
-        private bool VerifyPassword(LoginCommand loginCommand)
+        protected bool VerifyPassword(LoginCommand loginCommand)
         {
             var user = _userRepository.GetUserBy(loginCommand.username);
             if (user != null)

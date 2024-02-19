@@ -16,7 +16,7 @@ namespace RamandAPI.V2
     {
         private readonly IUserRepositoryApplication _userRepositoryApplication;
         private readonly IMessagesRepository _messageRepository;
-        public UserController(IMessagesRepository messagesRepository,IUserRepositoryApplication userRepository, ITokenRepository tokenRepository, IConfiguration configuration) : base(userRepository, tokenRepository, configuration)
+        public UserController(IMessagesRepository messagesRepository, IUserRepositoryApplication userRepository, ITokenRepository tokenRepository, IConfiguration configuration) : base(userRepository, tokenRepository, configuration)
         {
             _messageRepository = messagesRepository;
             _userRepositoryApplication = userRepository;
@@ -85,11 +85,14 @@ namespace RamandAPI.V2
         [HttpPut]
         public IActionResult Put(UpdateUserCommand updateUserCommand)
         {
-            var isUserUpdated = _userRepositoryApplication.Update(updateUserCommand);
-            if (isUserUpdated)
+            var isPasswordConfirmed = VerifyPassword(new LoginCommand(updateUserCommand.Username, updateUserCommand.Password));
+            if (isPasswordConfirmed)
             {
-                string url = Url.Action(nameof(Get), "Get updated user", new { userId = updateUserCommand.userId }, Request.Scheme);
-                return Ok(url);
+                var isUserUpdated = _userRepositoryApplication.Update(updateUserCommand);
+                if (isUserUpdated)
+                {
+                    return Ok(Url.Action(nameof(Get), "Get updated user", new { userId = updateUserCommand.userId }, Request.Scheme));
+                }
             }
             return BadRequest();
         }
@@ -98,11 +101,11 @@ namespace RamandAPI.V2
         public IActionResult Post()
         {
             //var user = _userRepositoryApplication.GetUserBy(1); 
-             var user = new UserVM(1, "@Admin22", "Masoud84");
+            var user = new UserVM(1, "@Admin22", "Masoud84");
             var jsonData = JsonConvert.SerializeObject(user);
             DataSender(jsonData);
             _messageRepository.InsertMessage(new Domain.Models.Messages(jsonData));
-            return Created("queue sent", new {user});
+            return Created("queue sent", new { user });
         }
 
         private void DataSender(string message)
@@ -116,7 +119,7 @@ namespace RamandAPI.V2
             }
 
             channel.BasicPublish("MExchange", "M-routing-key", null, messageBody);
-          
+
         }
     }
 }
